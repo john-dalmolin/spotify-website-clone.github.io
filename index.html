@@ -1,0 +1,2254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify – Web player: música para todas as pessoas</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <link
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+      href="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png"
+    />
+    <link
+      rel="icon"
+      sizes="16x16"
+      type="image/png"
+      href="https://open.spotifycdn.com/cdn/images/favicon16.1c487bff.png"
+    />
+    <link
+      rel="icon"
+      href="https://open.spotifycdn.com/cdn/images/favicon.0f31d2ea.ico"
+    />
+  </head>
+  <body>
+    <div id="main">
+      <div class="main-content">
+        <!--==================== SQUARE > LEFT > TOP ====================-->
+        <div class="left-panel">
+          <nav class="left-panel-content" aria-label="Principal">
+            <div class="first-content-section">
+              <ul class="first-square-content">
+                <li class="first-section-item">
+                  <a
+                    class="link-subtle nav-text-link active"
+                    draggable="false"
+                    aria-label="Início"
+                    aria-current="page"
+                    href="#"
+                  >
+                    <svg
+                      data-encore-id="icon"
+                      role="img"
+                      aria-hidden="true"
+                      class="Svg-sc-ytk21e-0 bneLcE home-icon"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12.5 3.247a1 1 0 0 0-1 0L4 7.577V20h4.5v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6H20V7.577l-7.5-4.33zm-2-1.732a3 3 0 0 1 3 0l7.5 4.33a2 2 0 0 1 1 1.732V21a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-6h-3v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.577a2 2 0 0 1 1-1.732l7.5-4.33z"
+                      ></path>
+                    </svg>
+                    <svg
+                      data-encore-id="icon"
+                      role="img"
+                      aria-hidden="true"
+                      class="Svg-sc-ytk21e-0 bneLcE home-active-icon"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"
+                      ></path>
+                    </svg>
+                    <span
+                      class="text-element-link gYdBJW encore-text-body-medium-bold"
+                      id="text"
+                      >Início</span
+                    >
+                  </a>
+                </li>
+                <li class="first-section-item">
+                  <a
+                    class="link-subtle nav-text-link"
+                    draggable="false"
+                    aria-label="Buscar"
+                    href="#"
+                  >
+                    <svg
+                      data-encore-id="icon"
+                      role="img"
+                      aria-hidden="true"
+                      class="Svg-sc-ytk21e-0 bneLcE search-icon"
+                      viewBox="0 0 24 24"
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"
+                        ></path>
+                      </svg>
+                    </svg>
+
+                    <svg
+                      data-encore-id="icon"
+                      role="img"
+                      aria-hidden="true"
+                      class="Svg-sc-ytk21e-0 bneLcE search-active-icon"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M15.356 10.558c0 2.623-2.16 4.75-4.823 4.75-2.664 0-4.824-2.127-4.824-4.75s2.16-4.75 4.824-4.75c2.664 0 4.823 2.127 4.823 4.75z"
+                      ></path>
+                      <path
+                        d="M1.126 10.558c0-5.14 4.226-9.28 9.407-9.28 5.18 0 9.407 4.14 9.407 9.28a9.157 9.157 0 0 1-2.077 5.816l4.344 4.344a1 1 0 0 1-1.414 1.414l-4.353-4.353a9.454 9.454 0 0 1-5.907 2.058c-5.18 0-9.407-4.14-9.407-9.28zm9.407-7.28c-4.105 0-7.407 3.274-7.407 7.28s3.302 7.279 7.407 7.279 7.407-3.273 7.407-7.28c0-4.005-3.302-7.278-7.407-7.278z"
+                      ></path>
+                    </svg>
+
+                    <span
+                      class="text-element-link gYdBJW encore-text-body-medium-bold"
+                      id="text"
+                      >Buscar</span
+                    >
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="first-content-section second-square-content">
+              <div
+                class="second-square-section"
+                tabindex="-1"
+                aria-expanded="false"
+              >
+                <!--==================== CATEGORIES SECTION ====================-->
+                <div class="">
+                  <header class="second-quare-section-header">
+                    <div class="j8iKBDzqTDtnDv4XbmrK">
+                      <div class="second-square-title">
+                        <button
+                          class="Button-sc-1dqy6lx-0 khATCl RAWO6AczuDMOTI0qAc0a OMCDc2F7g_AufJAtaKfL NxEINIJHGytq4gF1r2N1 or84FBarW2zQhXfB9VFb odS2IW9wfNVHhkhc0l_X O0AN8Ty_Cxd4iLwyKATB wQnUXn1m6Gy4PH8jhslb D8wJ9TPfJzLeLJYxnad2 oE8LAmRhbeQqsZrQo4lb zWWLnqWslTLHwq3wBgGB XNjgtSbyhshr7YQcVvry mhuhir0ikRqXAPHU8ZZ1"
+                          aria-label="Ocultar Sua Biblioteca"
+                          data-encore-id="buttonTertiary"
+                        >
+                          <span
+                            class="IconWrapper__Wrapper-sc-16usrgb-0 jEDcnm"
+                            aria-hidden="true"
+                          >
+                            <svg
+                              data-encore-id="icon"
+                              role="img"
+                              aria-hidden="true"
+                              viewBox="0 0 24 24"
+                              class="Svg-sc-ytk21e-0 bneLcE"
+                            >
+                              <path
+                                d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
+                              ></path>
+                            </svg>
+                          </span>
+                          Sua Biblioteca
+                        </button>
+                      </div>
+                      <span style="display: block">
+                        <button
+                          class="Button-sc-1dqy6lx-0 emaScS OMCDc2F7g_AufJAtaKfL TxO7Ee8iwqBpkgznKHsd NxEINIJHGytq4gF1r2N1 or84FBarW2zQhXfB9VFb XNjgtSbyhshr7YQcVvry O0AN8Ty_Cxd4iLwyKATB D8wJ9TPfJzLeLJYxnad2"
+                          aria-label="Criar playlist ou pasta"
+                          data-encore-id="buttonTertiary"
+                        >
+                          <span
+                            class="IconWrapper__Wrapper-sc-16usrgb-0 hYdsxw"
+                          >
+                            <svg
+                              data-encore-id="icon"
+                              role="img"
+                              aria-hidden="true"
+                              viewBox="0 0 16 16"
+                              class="Svg-sc-ytk21e-0 dYnaPI"
+                            >
+                              <path
+                                d="M15.25 8a.75.75 0 0 1-.75.75H8.75v5.75a.75.75 0 0 1-1.5 0V8.75H1.5a.75.75 0 0 1 0-1.5h5.75V1.5a.75.75 0 0 1 1.5 0v5.75h5.75a.75.75 0 0 1 .75.75z"
+                              ></path>
+                            </svg>
+                          </span>
+                        </button>
+                      </span>
+                      <button
+                        class="Button-sc-1dqy6lx-0 emaScS OMCDc2F7g_AufJAtaKfL TxO7Ee8iwqBpkgznKHsd NxEINIJHGytq4gF1r2N1 or84FBarW2zQhXfB9VFb odS2IW9wfNVHhkhc0l_X O0AN8Ty_Cxd4iLwyKATB wQnUXn1m6Gy4PH8jhslb D8wJ9TPfJzLeLJYxnad2 oE8LAmRhbeQqsZrQo4lb zWWLnqWslTLHwq3wBgGB XNjgtSbyhshr7YQcVvry mhuhir0ikRqXAPHU8ZZ1"
+                        aria-label="Ampliar Sua Biblioteca"
+                        data-encore-id="buttonTertiary"
+                      >
+                        <span
+                          class="IconWrapper__Wrapper-sc-16usrgb-0 hYdsxw"
+                          aria-hidden="true"
+                        >
+                          <svg
+                            data-encore-id="icon"
+                            role="img"
+                            aria-hidden="true"
+                            viewBox="0 0 16 16"
+                            class="Svg-sc-ytk21e-0 cAMMLk"
+                          >
+                            <path
+                              d="M7.19 1A.749.749 0 0 1 8.47.47L16 7.99l-7.53 7.521a.75.75 0 0 1-1.234-.815.75.75 0 0 1 .174-.243l5.72-5.714H.75a.75.75 0 1 1 0-1.498h12.38L7.41 1.529a.749.749 0 0 1-.22-.53z"
+                            ></path>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </header>
+
+                  <div class="wBsWS202aGdsul2kEGUf">
+                    <div class="bMurPtRDRv5LuN78MTVG MLbFLVC33caOj3FgSQMC">
+                      <div
+                        class="KjPUGV8uMbl_0bvk9ePv OlnSvEViCZ_vVdnc3mSQ"
+                        role="list"
+                        aria-label="Opções de filtro"
+                        tabindex="0"
+                      >
+                        <div role="presentation">
+                          <button
+                            class="Chip__ChipComponent-sc-ry3uox-0 kkaqVM"
+                            role="checkbox"
+                            aria-checked="false"
+                            style="
+                              margin-block-end: 0px;
+                              will-change: transform, opacity;
+                            "
+                            tabindex="-1"
+                            data-encore-id="chip"
+                          >
+                            <span
+                              class="ChipInner__ChipInnerComponent-sc-1ly6j4j-0 iyAEwU NxEINIJHGytq4gF1r2N1 or84FBarW2zQhXfB9VFb odS2IW9wfNVHhkhc0l_X O0AN8Ty_Cxd4iLwyKATB wQnUXn1m6Gy4PH8jhslb D8wJ9TPfJzLeLJYxnad2 mhuhir0ikRqXAPHU8ZZ1 XNjgtSbyhshr7YQcVvry OxrHhBsQAggwnv6RmqRy oE8LAmRhbeQqsZrQo4lb zWWLnqWslTLHwq3wBgGB pTvxY5yAQklZgb7VZFGS"
+                            >
+                              Playlists
+                            </span>
+                          </button>
+                          <button
+                            class="Chip__ChipComponent-sc-ry3uox-0 kkaqVM"
+                            role="checkbox"
+                            aria-checked="false"
+                            style="
+                              margin-block-end: 0px;
+                              will-change: transform, opacity;
+                            "
+                            tabindex="-1"
+                            data-encore-id="chip"
+                          >
+                            <span
+                              class="ChipInner__ChipInnerComponent-sc-1ly6j4j-0 iyAEwU NxEINIJHGytq4gF1r2N1 or84FBarW2zQhXfB9VFb odS2IW9wfNVHhkhc0l_X O0AN8Ty_Cxd4iLwyKATB wQnUXn1m6Gy4PH8jhslb D8wJ9TPfJzLeLJYxnad2 mhuhir0ikRqXAPHU8ZZ1 XNjgtSbyhshr7YQcVvry OxrHhBsQAggwnv6RmqRy oE8LAmRhbeQqsZrQo4lb zWWLnqWslTLHwq3wBgGB pTvxY5yAQklZgb7VZFGS"
+                            >
+                              Artistas
+                            </span>
+                          </button>
+                          <button
+                            class="Chip__ChipComponent-sc-ry3uox-0 kkaqVM"
+                            role="checkbox"
+                            aria-checked="false"
+                            style="
+                              margin-block-end: 0px;
+                              will-change: transform, opacity;
+                            "
+                            tabindex="-1"
+                            data-encore-id="chip"
+                          >
+                            <span
+                              class="ChipInner__ChipInnerComponent-sc-1ly6j4j-0 iyAEwU NxEINIJHGytq4gF1r2N1 or84FBarW2zQhXfB9VFb odS2IW9wfNVHhkhc0l_X O0AN8Ty_Cxd4iLwyKATB wQnUXn1m6Gy4PH8jhslb D8wJ9TPfJzLeLJYxnad2 mhuhir0ikRqXAPHU8ZZ1 XNjgtSbyhshr7YQcVvry OxrHhBsQAggwnv6RmqRy oE8LAmRhbeQqsZrQo4lb zWWLnqWslTLHwq3wBgGB pTvxY5yAQklZgb7VZFGS"
+                            >
+                              Álbuns
+                            </span>
+                          </button>
+                          <button
+                            class="Chip__ChipComponent-sc-ry3uox-0 kkaqVM"
+                            role="checkbox"
+                            aria-checked="false"
+                            style="
+                              margin-block-end: 0px;
+                              will-change: transform, opacity;
+                            "
+                            tabindex="-1"
+                            data-encore-id="chip"
+                          >
+                            <span
+                              class="ChipInner__ChipInnerComponent-sc-1ly6j4j-0 iyAEwU NxEINIJHGytq4gF1r2N1 or84FBarW2zQhXfB9VFb odS2IW9wfNVHhkhc0l_X O0AN8Ty_Cxd4iLwyKATB wQnUXn1m6Gy4PH8jhslb D8wJ9TPfJzLeLJYxnad2 mhuhir0ikRqXAPHU8ZZ1 XNjgtSbyhshr7YQcVvry OxrHhBsQAggwnv6RmqRy oE8LAmRhbeQqsZrQo4lb zWWLnqWslTLHwq3wBgGB pTvxY5yAQklZgb7VZFGS"
+                            >
+                              Podcasts e programas
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="ijZQH9pePkbB2MbJHCJV" dir="ltr">
+                        <button
+                          class="XTk61Y8OkBdUT6Wj4F6i"
+                          tabindex="-1"
+                          aria-hidden="true"
+                        >
+                          <svg
+                            data-encore-id="icon"
+                            role="img"
+                            aria-hidden="true"
+                            viewBox="0 0 16 16"
+                            class="Svg-sc-ytk21e-0 dCAvla"
+                          >
+                            <path
+                              d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"
+                            ></path>
+                          </svg>
+                        </button>
+                        <button
+                          class="XTk61Y8OkBdUT6Wj4F6i VfDGbMWaJe9rcefizTNk"
+                          tabindex="-1"
+                          aria-hidden="true"
+                        >
+                          <svg
+                            data-encore-id="icon"
+                            role="img"
+                            aria-hidden="true"
+                            viewBox="0 0 16 16"
+                            class="Svg-sc-ytk21e-0 dCAvla"
+                          >
+                            <path
+                              d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--==================== FAV LIST + SCROLL ====================-->
+                <div
+                  class="os-host os-host-foreign os-theme-spotify os-host-overflow os-host-overflow-y os-host-resize-disabled os-host-scrollbar-horizontal-hidden _K79lE9KrIAkl_bUSSUM os-host-transition"
+                >
+                  <div class="os-resize-observer-host observed">
+                    <div
+                      class="os-resize-observer"
+                      style="left: 0px; right: auto"
+                    ></div>
+                  </div>
+
+                  <div
+                    class="os-size-auto-observer observed"
+                    style="height: calc(100% + 1px); float: left"
+                  >
+                    <div class="os-resize-observer"></div>
+                  </div>
+
+                  <div
+                    class="os-content-glue"
+                    style="margin: 0px; width: 419px; height: 674px"
+                  ></div>
+                  <div class="os-padding">
+                    <div
+                      class="os-viewport os-viewport-native-scrollbars-invisible os-viewport-native-scrollbars-overlaid"
+                      style="overflow-y: scroll"
+                    >
+                      <div
+                        class="os-content"
+                        style="padding: 0px; height: 100%; width: 100%"
+                      >
+                        <div class="ifVI2CEdOZGgMWIUN2Cw">
+                          <div
+                            class="_0FuodatXU4_fToYAuYtY NxEINIJHGytq4gF1r2N1 or84FBarW2zQhXfB9VFb odS2IW9wfNVHhkhc0l_X O0AN8Ty_Cxd4iLwyKATB wQnUXn1m6Gy4PH8jhslb D8wJ9TPfJzLeLJYxnad2 oE8LAmRhbeQqsZrQo4lb zWWLnqWslTLHwq3wBgGB XNjgtSbyhshr7YQcVvry mhuhir0ikRqXAPHU8ZZ1 RcGCSu8qHUle68BTwF73"
+                          >
+                            <div class="JzZyf6OGCGtdscOZGt8Y" role="search">
+                              <input
+                                class="QZhV0hWVKlExlKr266jo"
+                                role="searchbox"
+                                maxlength="80"
+                                autocorrect="off"
+                                autocapitalize="none"
+                                spellcheck="false"
+                                placeholder="Buscar em Sua Biblioteca"
+                                aria-hidden="true"
+                                tabindex="-1"
+                                value=""
+                              />
+
+                              <div class="uAJxc_psYWeimY8N9bH9">
+                                <span class="_bjbHn5TABOW2s5LsEGX">
+                                  <svg
+                                    data-encore-id="icon"
+                                    role="img"
+                                    aria-hidden="true"
+                                    class="Svg-sc-ytk21e-0 dYnaPI CIVozJ8XNPJ60uMN23Yg"
+                                    viewBox="0 0 16 16"
+                                  >
+                                    <path
+                                      d="M7 1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zM.25 7a6.75 6.75 0 1 1 12.096 4.12l3.184 3.185a.75.75 0 1 1-1.06 1.06L11.304 12.2A6.75 6.75 0 0 1 .25 7z"
+                                    ></path>
+                                  </svg>
+                                </span>
+                              </div>
+
+                              <button
+                                class="wCl7pMTEE68v1xuZeZiB KAydWoHSkQRqhQ1vkVwK"
+                                data-testid="expand-button"
+                                aria-hidden="false"
+                                aria-label="Buscar em Sua Biblioteca"
+                              >
+                                <svg
+                                  data-encore-id="icon"
+                                  role="img"
+                                  aria-hidden="true"
+                                  class="Svg-sc-ytk21e-0 dYnaPI CIVozJ8XNPJ60uMN23Yg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M7 1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zM.25 7a6.75 6.75 0 1 1 12.096 4.12l3.184 3.185a.75.75 0 1 1-1.06 1.06L11.304 12.2A6.75 6.75 0 0 1 .25 7z"
+                                  ></path>
+                                </svg>
+                              </button>
+                            </div>
+
+                            <span class="XZRX_ea9eNn4rOLpNGLp">
+                              <span class="XZRX_ea9eNn4rOLpNGLp">
+                                <button
+                                  class="Button-sc-1dqy6lx-0 QSgx"
+                                  role="combobox"
+                                  aria-controls="sort-and-view-picker"
+                                  aria-label="Recentes, Visualização: Lista"
+                                  data-encore-id="buttonTertiary"
+                                >
+                                  <span
+                                    class="Text__TextElement-sc-if376j-0 gYdBJW encore-text-body-small mdvwJxMDgGjicVAZoBAw"
+                                    data-encore-id="text"
+                                    >Recentes</span
+                                  >
+
+                                  <span
+                                    class="IconWrapper__Wrapper-sc-16usrgb-0 fYTvv"
+                                    aria-hidden="true"
+                                  >
+                                    <svg
+                                      data-encore-id="icon"
+                                      role="img"
+                                      aria-hidden="true"
+                                      viewBox="0 0 16 16"
+                                      class="Svg-sc-ytk21e-0 cAMMLk"
+                                    >
+                                      <path
+                                        d="M15 14.5H5V13h10v1.5zm0-5.75H5v-1.5h10v1.5zM15 3H5V1.5h10V3zM3 3H1V1.5h2V3zm0 11.5H1V13h2v1.5zm0-5.75H1v-1.5h2v1.5z"
+                                      ></path>
+                                    </svg>
+                                  </span>
+                                </button>
+                              </span>
+                            </span>
+                          </div>
+
+                          <div>
+                            <ul
+                              role="list"
+                              tabindex="0"
+                              aria-label="Sua Biblioteca"
+                            >
+                              <div
+                                class="JUa6JJNj7R_Y3i4P8YUX"
+                                style="height: 8128px; --row-height: 64px"
+                                role="presentation"
+                              >
+                                <div
+                                  class="lyVkg68L7ycnwyOcO3vj"
+                                  data-testid="top-sentinel"
+                                  style="height: 512px"
+                                  role="presentation"
+                                >
+                                  <li
+                                    class="Pns6F5g4OEwEpdmOWTLg"
+                                    role="listitem"
+                                    style="height: calc(100% - 512px)"
+                                  ></li>
+                                  <div
+                                    style="height: 512px"
+                                    role="presentation"
+                                  ></div>
+                                </div>
+
+                                <div
+                                  style="transform: translateY(0px)"
+                                  role="presentation"
+                                >
+                                  <!--==================== 1º BOX-OPTION ON VERTICAL SECTION ====================-->
+                                  <li
+                                    class="NxEINIJHGytq4gF1r2N1 qEiVyQ28VnOKb0LeijqL"
+                                    role="listitem"
+                                    style="--ylx-folder-depth: 0"
+                                    draggable="true"
+                                    aria-setsize="127"
+                                    aria-posinset="1"
+                                  >
+                                    <div
+                                      class="Box__BoxComponent-sc-y4nds-0 jByoWw Box-sc-8t9c76-0 chaEYk ojrThQm1wxR2gZ6GntJB"
+                                      data-encore-id="listrow"
+                                      role="group"
+                                      aria-labelledby="listrow-title-spotify:playlist:37i9dQZF1DXdl6IPOySdX4"
+                                    >
+                                      <div
+                                        class="RowButton-sc-xxkq4e-0 hIehTT"
+                                        role="button"
+                                        aria-disabled="false"
+                                        aria-labelledby="listrow-title-spotify:playlist:37i9dQZF1DXdl6IPOySdX4 listrow-subtitle-spotify:playlist:37i9dQZF1DXdl6IPOySdX4"
+                                        aria-describedby="onClickHintspotify:playlist:37i9dQZF1DXdl6IPOySdX4"
+                                        tabindex="-1"
+                                      ></div>
+                                      <div
+                                        style="display: none"
+                                        id="onClickHintspotify:playlist:37i9dQZF1DXdl6IPOySdX4"
+                                      ></div>
+
+                                      <div
+                                        class="Areas__HeaderSideArea-sc-8gfrea-1 ljvfQS"
+                                      >
+                                        <div
+                                          class="Areas__HeaderSideAreaFlexContainer-sc-8gfrea-2 hvZiQp"
+                                        >
+                                          <div
+                                            class="vreceNX3ABcxyddeS83B nZSNG58XEPTX69mkNi9n g3kBhX1E4EYEC2NFhhxG"
+                                            style="
+                                              width: 48px;
+                                              height: 48px;
+                                              --extracted-entity-color: #481800;
+                                            "
+                                          >
+                                            <img
+                                              class="mMx2LUixlnN_Fu45JpFB iJp40IxKg6emF6KYJ414 Yn2Ei5QZn19gria6LjZj"
+                                              aria-hidden="true"
+                                              draggable="false"
+                                              loading="eager"
+                                              src="https://i.scdn.co/image/ab67706f000000020d5e6f861f423ecfac53610b"
+                                              alt="goosebumps"
+                                              data-testid="entity-image"
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div
+                                        class="Areas__HeaderArea-sc-8gfrea-3 TJKQw"
+                                      >
+                                        <div
+                                          class="Areas__InteractiveArea-sc-8gfrea-0 Areas__Column-sc-8gfrea-5 bJSfgC jwUvtM"
+                                        >
+                                          <p
+                                            id="listrow-title-spotify:playlist:37i9dQZF1DXdl6IPOySdX4"
+                                            class="Type__TypeElement-sc-goli3j-0 fZDcWX ListRowTitle__ListRowType-sc-1xe2if1-1 fkzPZy d33vqKRxohS9RxzCic1D gj1L_SVM_H8GteWMdEF_"
+                                            data-encore-id="type"
+                                            dir="auto"
+                                          >
+                                            <span
+                                              class="ListRowTitle__LineClamp-sc-1xe2if1-0 jjpOuK"
+                                              >goosebumps</span
+                                            >
+                                          </p>
+
+                                          <div class="LSrBzBljgLeDhcm3Soye">
+                                            <p
+                                              id="listrow-subtitle-spotify:playlist:37i9dQZF1DXdl6IPOySdX4"
+                                              class="Type__TypeElement-sc-goli3j-0 bDHxRN ListRowDetails__ListRowDetailType-sc-sozu4l-0 ekBKJj d33vqKRxohS9RxzCic1D"
+                                              data-encore-id="type"
+                                              dir="auto"
+                                            >
+                                              <span
+                                                class="ListRowDetails__LineClamp-sc-sozu4l-1 hITFAK"
+                                              >
+                                                <span
+                                                  class="HdTF8gsRm5MgWvEYlokG"
+                                                ></span>
+                                                Playlist • Spotify
+                                              </span>
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!--==================== 2º BOX-OPTION ON VERTICAL SECTION ====================-->
+                                  <li
+                                    role="listitem"
+                                    draggable="true"
+                                    class="NxEINIJHGytq4gF1r2N1 or84FBarW2zQhXfB9VFb odS2IW9wfNVHhkhc0l_X qEiVyQ28VnOKb0LeijqL"
+                                    aria-setsize="127"
+                                    aria-posinset="2"
+                                  >
+                                    <div
+                                      class="Box__BoxComponent-sc-y4nds-0 jByoWw Box-sc-8t9c76-0 chaEYk ojrThQm1wxR2gZ6GntJB"
+                                      data-encore-id="listRow"
+                                      role="group"
+                                      aria-labelledby="listrow-title-spotify:collection:tracks"
+                                    >
+                                      <div
+                                        role="button"
+                                        aria-disabled="false"
+                                        aria-labelledby="listrow-title-spotify:collection:tracks listrow-subtitle-spotify:collection:tracks"
+                                        aria-describedby="onClickHintspotify:collection:tracks"
+                                        tabindex="-1"
+                                        class="RowButton-sc-xxkq4e-0 hIehTT"
+                                      ></div>
+                                      <div
+                                        style="display: none"
+                                        id="onClickHintspotify:collection:tracks"
+                                      ></div>
+                                      <div
+                                        class="Areas__HeaderSideArea-sc-8gfrea-1 ljvfQS"
+                                      >
+                                        <div
+                                          class="Areas__HeaderSideAreaFlexContainer-sc-8gfrea-2 hvZiQp"
+                                        >
+                                          <div
+                                            class="vreceNX3ABcxyddeS83B nZSNG58XEPTX69mkNi9n g3kBhX1E4EYEC2NFhhxG"
+                                            style="
+                                              width: 48px;
+                                              height: 48px;
+                                              --extracted-entity-color: #5018f0;
+                                            "
+                                          >
+                                            <img
+                                              aria-hidden="true"
+                                              draggable="false"
+                                              loading="eager"
+                                              src="https://misc.scdn.co/liked-songs/liked-songs-64.png"
+                                              data-testid="entity-image"
+                                              alt="Músicas Curtidas"
+                                              class="mMx2LUixlnN_Fu45JpFB iJp40IxKg6emF6KYJ414 yOKoknIYYzAE90pe7_SE Yn2Ei5QZn19gria6LjZj"
+                                              srcset="
+                                                https://misc.scdn.co/liked-songs/liked-songs-64.png 32w,
+                                                https://misc.scdn.co/liked-songs/liked-songs-64.png 64w
+                                              "
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="Areas__HeaderArea-sc-8gfrea-3 TJKQw"
+                                      >
+                                        <div
+                                          class="Areas__InteractiveArea-sc-8gfrea-0 Areas__Column-sc-8gfrea-5 bJSfgC jwUvtM"
+                                        >
+                                          <p
+                                            id="listrow-title-spotify:collection:tracks"
+                                            data-encore-id="type"
+                                            class="Type__TypeElement-sc-goli3j-0 fZDcWX ListRowTitle__ListRowType-sc-1xe2if1-1 fkzPZy d33vqKRxohS9RxzCic1D gj1L_SVM_H8GteWMdEF_"
+                                            dir="auto"
+                                          >
+                                            <span
+                                              class="ListRowTitle__LineClamp-sc-1xe2if1-0 jjpOuK"
+                                              >Músicas Curtidas</span
+                                            >
+                                          </p>
+                                          <div class="LSrBzBljgLeDhcm3Soye">
+                                            <p
+                                              data-encore-id="type"
+                                              id="listrow-subtitle-spotify:collection:tracks"
+                                              class="Type__TypeElement-sc-goli3j-0 bDHxRN ListRowDetails__ListRowDetailType-sc-sozu4l-0 ekBKJj d33vqKRxohS9RxzCic1D"
+                                              dir="auto"
+                                            >
+                                              <span
+                                                class="ListRowDetails__LineClamp-sc-sozu4l-1 hITFAK"
+                                                ><span
+                                                  class="HdTF8gsRm5MgWvEYlokG"
+                                                ></span
+                                                >Playlist • 277 músicas</span
+                                              >
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+
+                                  <!--==================== 3º BOX-OPTION ON VERTICAL SECTION ====================-->
+                                  <li
+                                    role="listitem"
+                                    style="--ylx-folder-depth: 0"
+                                    draggable="true"
+                                    class="NxEINIJHGytq4gF1r2N1 or84FBarW2zQhXfB9VFb odS2IW9wfNVHhkhc0l_X O0AN8Ty_Cxd4iLwyKATB XNjgtSbyhshr7YQcVvry qEiVyQ28VnOKb0LeijqL"
+                                    aria-setsize="127"
+                                    aria-posinset="5"
+                                  >
+                                    <div
+                                      class="Box__BoxComponent-sc-y4nds-0 jByoWw Box-sc-8t9c76-0 chaEYk ojrThQm1wxR2gZ6GntJB"
+                                      data-encore-id="listRow"
+                                      role="group"
+                                      aria-labelledby="listrow-title-spotify:playlist:5G4C5HvFDe9Fig2GCaxwMD"
+                                    >
+                                      <div
+                                        role="button"
+                                        aria-disabled="false"
+                                        aria-labelledby="listrow-title-spotify:playlist:5G4C5HvFDe9Fig2GCaxwMD listrow-subtitle-spotify:playlist:5G4C5HvFDe9Fig2GCaxwMD"
+                                        aria-describedby="onClickHintspotify:playlist:5G4C5HvFDe9Fig2GCaxwMD"
+                                        tabindex="-1"
+                                        class="RowButton-sc-xxkq4e-0 hIehTT"
+                                      ></div>
+                                      <div
+                                        style="display: none"
+                                        id="onClickHintspotify:playlist:5G4C5HvFDe9Fig2GCaxwMD"
+                                      ></div>
+                                      <div
+                                        class="Areas__HeaderSideArea-sc-8gfrea-1 ljvfQS"
+                                      >
+                                        <div
+                                          class="Areas__HeaderSideAreaFlexContainer-sc-8gfrea-2 hvZiQp"
+                                        >
+                                          <div
+                                            class="vreceNX3ABcxyddeS83B nZSNG58XEPTX69mkNi9n g3kBhX1E4EYEC2NFhhxG"
+                                            style="
+                                              width: 48px;
+                                              height: 48px;
+                                              --extracted-entity-color: #ee082e;
+                                            "
+                                          >
+                                            <img
+                                              aria-hidden="true"
+                                              draggable="false"
+                                              loading="eager"
+                                              src="https://i2o.scdn.co/image/ab67706c0000cfa39770c6f4aea54977057f8f73"
+                                              data-testid="entity-image"
+                                              alt="Petrichor"
+                                              class="mMx2LUixlnN_Fu45JpFB iJp40IxKg6emF6KYJ414 yOKoknIYYzAE90pe7_SE Yn2Ei5QZn19gria6LjZj"
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="Areas__HeaderArea-sc-8gfrea-3 TJKQw"
+                                      >
+                                        <div
+                                          class="Areas__InteractiveArea-sc-8gfrea-0 Areas__Column-sc-8gfrea-5 bJSfgC jwUvtM"
+                                        >
+                                          <p
+                                            id="listrow-title-spotify:playlist:5G4C5HvFDe9Fig2GCaxwMD"
+                                            data-encore-id="type"
+                                            class="Type__TypeElement-sc-goli3j-0 fZDcWX ListRowTitle__ListRowType-sc-1xe2if1-1 fkzPZy d33vqKRxohS9RxzCic1D gj1L_SVM_H8GteWMdEF_"
+                                            dir="auto"
+                                          >
+                                            <span
+                                              class="ListRowTitle__LineClamp-sc-1xe2if1-0 jjpOuK"
+                                              >Petrichor</span
+                                            >
+                                          </p>
+                                          <div class="LSrBzBljgLeDhcm3Soye">
+                                            <p
+                                              data-encore-id="type"
+                                              id="listrow-subtitle-spotify:playlist:5G4C5HvFDe9Fig2GCaxwMD"
+                                              class="Type__TypeElement-sc-goli3j-0 bDHxRN ListRowDetails__ListRowDetailType-sc-sozu4l-0 ekBKJj d33vqKRxohS9RxzCic1D"
+                                              dir="auto"
+                                            >
+                                              <span
+                                                class="ListRowDetails__LineClamp-sc-sozu4l-1 hITFAK"
+                                                ><span
+                                                  class="HdTF8gsRm5MgWvEYlokG"
+                                                ></span
+                                                >Playlist • John Dalmolin</span
+                                              >
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!--==================== 4º BOX-OPTION ON VERTICAL SECTION ====================-->
+                                  <li
+                                    role="listitem"
+                                    style="--ylx-folder-depth: 0"
+                                    draggable="true"
+                                    class="NxEINIJHGytq4gF1r2N1 qEiVyQ28VnOKb0LeijqL"
+                                    aria-setsize="127"
+                                    aria-posinset="6"
+                                  >
+                                    <div
+                                      class="Box__BoxComponent-sc-y4nds-0 jByoWw Box-sc-8t9c76-0 chaEYk ojrThQm1wxR2gZ6GntJB"
+                                      data-encore-id="listRow"
+                                      role="group"
+                                      aria-labelledby="listrow-title-spotify:playlist:37i9dQZF1EQn4jwNIohw50"
+                                    >
+                                      <div
+                                        role="button"
+                                        aria-disabled="false"
+                                        aria-labelledby="listrow-title-spotify:playlist:37i9dQZF1EQn4jwNIohw50 listrow-subtitle-spotify:playlist:37i9dQZF1EQn4jwNIohw50"
+                                        aria-describedby="onClickHintspotify:playlist:37i9dQZF1EQn4jwNIohw50"
+                                        tabindex="-1"
+                                        class="RowButton-sc-xxkq4e-0 hIehTT"
+                                      ></div>
+                                      <div
+                                        style="display: none"
+                                        id="onClickHintspotify:playlist:37i9dQZF1EQn4jwNIohw50"
+                                      ></div>
+                                      <div
+                                        class="Areas__HeaderSideArea-sc-8gfrea-1 ljvfQS"
+                                      >
+                                        <div
+                                          class="Areas__HeaderSideAreaFlexContainer-sc-8gfrea-2 hvZiQp"
+                                        >
+                                          <div
+                                            class="vreceNX3ABcxyddeS83B nZSNG58XEPTX69mkNi9n g3kBhX1E4EYEC2NFhhxG"
+                                            style="
+                                              width: 48px;
+                                              height: 48px;
+                                              --extracted-entity-color: #d81088;
+                                            "
+                                          >
+                                            <img
+                                              aria-hidden="true"
+                                              draggable="false"
+                                              loading="eager"
+                                              src="https://seed-mix-image.spotifycdn.com/v6/img/two_thousands/4UXqAaa6dQYAk18Lv7PEgX/pt/default"
+                                              data-testid="entity-image"
+                                              alt="Mix anos 2000"
+                                              class="mMx2LUixlnN_Fu45JpFB iJp40IxKg6emF6KYJ414 yOKoknIYYzAE90pe7_SE Yn2Ei5QZn19gria6LjZj"
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="Areas__HeaderArea-sc-8gfrea-3 TJKQw"
+                                      >
+                                        <div
+                                          class="Areas__InteractiveArea-sc-8gfrea-0 Areas__Column-sc-8gfrea-5 bJSfgC jwUvtM"
+                                        >
+                                          <p
+                                            id="listrow-title-spotify:playlist:37i9dQZF1EQn4jwNIohw50"
+                                            data-encore-id="type"
+                                            class="Type__TypeElement-sc-goli3j-0 fZDcWX ListRowTitle__ListRowType-sc-1xe2if1-1 fkzPZy d33vqKRxohS9RxzCic1D gj1L_SVM_H8GteWMdEF_"
+                                            dir="auto"
+                                          >
+                                            <span
+                                              class="ListRowTitle__LineClamp-sc-1xe2if1-0 jjpOuK"
+                                              >Mix anos 2000</span
+                                            >
+                                          </p>
+                                          <div class="LSrBzBljgLeDhcm3Soye">
+                                            <p
+                                              data-encore-id="type"
+                                              id="listrow-subtitle-spotify:playlist:37i9dQZF1EQn4jwNIohw50"
+                                              class="Type__TypeElement-sc-goli3j-0 bDHxRN ListRowDetails__ListRowDetailType-sc-sozu4l-0 ekBKJj d33vqKRxohS9RxzCic1D"
+                                              dir="auto"
+                                            >
+                                              <span
+                                                class="ListRowDetails__LineClamp-sc-sozu4l-1 hITFAK"
+                                                ><span
+                                                  class="HdTF8gsRm5MgWvEYlokG"
+                                                ></span
+                                                >Playlist • Spotify</span
+                                              >
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!--==================== 5º BOX-OPTION ON VERTICAL SECTION ====================-->
+                                  <li
+                                    role="listitem"
+                                    draggable="true"
+                                    class="NxEINIJHGytq4gF1r2N1 qEiVyQ28VnOKb0LeijqL"
+                                    aria-setsize="127"
+                                    aria-posinset="18"
+                                  >
+                                    <div
+                                      class="Box__BoxComponent-sc-y4nds-0 jByoWw Box-sc-8t9c76-0 chaEYk ojrThQm1wxR2gZ6GntJB"
+                                      data-encore-id="listRow"
+                                      role="group"
+                                      aria-labelledby="listrow-title-spotify:album:5EzDhyNZuO7kuaABHwbBKX"
+                                    >
+                                      <div
+                                        role="button"
+                                        aria-disabled="false"
+                                        aria-labelledby="listrow-title-spotify:album:5EzDhyNZuO7kuaABHwbBKX listrow-subtitle-spotify:album:5EzDhyNZuO7kuaABHwbBKX"
+                                        aria-describedby="onClickHintspotify:album:5EzDhyNZuO7kuaABHwbBKX"
+                                        tabindex="-1"
+                                        class="RowButton-sc-xxkq4e-0 hIehTT"
+                                      ></div>
+                                      <div
+                                        style="display: none"
+                                        id="onClickHintspotify:album:5EzDhyNZuO7kuaABHwbBKX"
+                                      ></div>
+                                      <div
+                                        class="Areas__HeaderSideArea-sc-8gfrea-1 ljvfQS"
+                                      >
+                                        <div
+                                          class="Areas__HeaderSideAreaFlexContainer-sc-8gfrea-2 hvZiQp"
+                                        >
+                                          <div
+                                            class="vreceNX3ABcxyddeS83B nZSNG58XEPTX69mkNi9n g3kBhX1E4EYEC2NFhhxG"
+                                            style="
+                                              width: 48px;
+                                              height: 48px;
+                                              --extracted-entity-color: #d02020;
+                                            "
+                                          >
+                                            <img
+                                              aria-hidden="true"
+                                              draggable="false"
+                                              loading="eager"
+                                              src="https://i.scdn.co/image/ab67616d000011eb53f6fa0d2589c6a7174f4b81"
+                                              data-testid="entity-image"
+                                              alt="Nectar"
+                                              class="mMx2LUixlnN_Fu45JpFB iJp40IxKg6emF6KYJ414 yOKoknIYYzAE90pe7_SE Yn2Ei5QZn19gria6LjZj"
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="Areas__HeaderArea-sc-8gfrea-3 TJKQw"
+                                      >
+                                        <div
+                                          class="Areas__InteractiveArea-sc-8gfrea-0 Areas__Column-sc-8gfrea-5 bJSfgC jwUvtM"
+                                        >
+                                          <p
+                                            id="listrow-title-spotify:album:5EzDhyNZuO7kuaABHwbBKX"
+                                            data-encore-id="type"
+                                            class="Type__TypeElement-sc-goli3j-0 fZDcWX ListRowTitle__ListRowType-sc-1xe2if1-1 fkzPZy d33vqKRxohS9RxzCic1D gj1L_SVM_H8GteWMdEF_"
+                                            dir="auto"
+                                          >
+                                            <span
+                                              class="ListRowTitle__LineClamp-sc-1xe2if1-0 jjpOuK"
+                                              >Nectar</span
+                                            >
+                                          </p>
+                                          <div class="LSrBzBljgLeDhcm3Soye">
+                                            <p
+                                              data-encore-id="type"
+                                              id="listrow-subtitle-spotify:album:5EzDhyNZuO7kuaABHwbBKX"
+                                              class="Type__TypeElement-sc-goli3j-0 bDHxRN ListRowDetails__ListRowDetailType-sc-sozu4l-0 ekBKJj d33vqKRxohS9RxzCic1D"
+                                              dir="auto"
+                                            >
+                                              <span
+                                                class="ListRowDetails__LineClamp-sc-sozu4l-1 hITFAK"
+                                                ><span
+                                                  class="HdTF8gsRm5MgWvEYlokG"
+                                                ></span
+                                                >Álbum • Joji</span
+                                              >
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!--==================== 6º BOX-OPTION ON VERTICAL SECTION ====================-->
+                                  <li
+                                    role="listitem"
+                                    style="--ylx-folder-depth: 0"
+                                    draggable="true"
+                                    class="NxEINIJHGytq4gF1r2N1 qEiVyQ28VnOKb0LeijqL"
+                                    aria-setsize="127"
+                                    aria-posinset="10"
+                                  >
+                                    <div
+                                      class="Box__BoxComponent-sc-y4nds-0 jByoWw Box-sc-8t9c76-0 chaEYk ojrThQm1wxR2gZ6GntJB"
+                                      data-encore-id="listRow"
+                                      role="group"
+                                      aria-labelledby="listrow-title-spotify:playlist:37i9dQZF1DZ06evO3HnA7C"
+                                    >
+                                      <div
+                                        role="button"
+                                        aria-disabled="false"
+                                        aria-labelledby="listrow-title-spotify:playlist:37i9dQZF1DZ06evO3HnA7C listrow-subtitle-spotify:playlist:37i9dQZF1DZ06evO3HnA7C"
+                                        aria-describedby="onClickHintspotify:playlist:37i9dQZF1DZ06evO3HnA7C"
+                                        tabindex="-1"
+                                        class="RowButton-sc-xxkq4e-0 hIehTT"
+                                      ></div>
+                                      <div
+                                        style="display: none"
+                                        id="onClickHintspotify:playlist:37i9dQZF1DZ06evO3HnA7C"
+                                      ></div>
+                                      <div
+                                        class="Areas__HeaderSideArea-sc-8gfrea-1 ljvfQS"
+                                      >
+                                        <div
+                                          class="Areas__HeaderSideAreaFlexContainer-sc-8gfrea-2 hvZiQp"
+                                        >
+                                          <div
+                                            class="vreceNX3ABcxyddeS83B nZSNG58XEPTX69mkNi9n g3kBhX1E4EYEC2NFhhxG"
+                                            style="
+                                              width: 48px;
+                                              height: 48px;
+                                              --extracted-entity-color: #70758d;
+                                            "
+                                          >
+                                            <img
+                                              aria-hidden="true"
+                                              draggable="false"
+                                              loading="eager"
+                                              src="https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO3HnA7C-default.jpg"
+                                              data-testid="entity-image"
+                                              alt="This Is Péricles"
+                                              class="mMx2LUixlnN_Fu45JpFB iJp40IxKg6emF6KYJ414 yOKoknIYYzAE90pe7_SE Yn2Ei5QZn19gria6LjZj"
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="Areas__HeaderArea-sc-8gfrea-3 TJKQw"
+                                      >
+                                        <div
+                                          class="Areas__InteractiveArea-sc-8gfrea-0 Areas__Column-sc-8gfrea-5 bJSfgC jwUvtM"
+                                        >
+                                          <p
+                                            id="listrow-title-spotify:playlist:37i9dQZF1DZ06evO3HnA7C"
+                                            data-encore-id="type"
+                                            class="Type__TypeElement-sc-goli3j-0 fZDcWX ListRowTitle__ListRowType-sc-1xe2if1-1 fkzPZy d33vqKRxohS9RxzCic1D gj1L_SVM_H8GteWMdEF_"
+                                            dir="auto"
+                                          >
+                                            <span
+                                              class="ListRowTitle__LineClamp-sc-1xe2if1-0 jjpOuK"
+                                              >This Is Péricles</span
+                                            >
+                                          </p>
+                                          <div class="LSrBzBljgLeDhcm3Soye">
+                                            <p
+                                              data-encore-id="type"
+                                              id="listrow-subtitle-spotify:playlist:37i9dQZF1DZ06evO3HnA7C"
+                                              class="Type__TypeElement-sc-goli3j-0 bDHxRN ListRowDetails__ListRowDetailType-sc-sozu4l-0 ekBKJj d33vqKRxohS9RxzCic1D"
+                                              dir="auto"
+                                            >
+                                              <span
+                                                class="ListRowDetails__LineClamp-sc-sozu4l-1 hITFAK"
+                                                ><span
+                                                  class="HdTF8gsRm5MgWvEYlokG"
+                                                ></span
+                                                >Playlist • Spotify</span
+                                              >
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!--==================== 7º BOX-OPTION ON VERTICAL SECTION ====================-->
+                                  <li
+                                    role="listitem"
+                                    draggable="true"
+                                    class="NxEINIJHGytq4gF1r2N1 qEiVyQ28VnOKb0LeijqL"
+                                    aria-setsize="127"
+                                    aria-posinset="32"
+                                  >
+                                    <div
+                                      class="Box__BoxComponent-sc-y4nds-0 jByoWw Box-sc-8t9c76-0 chaEYk ojrThQm1wxR2gZ6GntJB"
+                                      data-encore-id="listRow"
+                                      role="group"
+                                      aria-labelledby="listrow-title-spotify:album:007DWn799UWvfY1wwZeENR"
+                                    >
+                                      <div
+                                        role="button"
+                                        aria-disabled="false"
+                                        aria-labelledby="listrow-title-spotify:album:007DWn799UWvfY1wwZeENR listrow-subtitle-spotify:album:007DWn799UWvfY1wwZeENR"
+                                        aria-describedby="onClickHintspotify:album:007DWn799UWvfY1wwZeENR"
+                                        tabindex="-1"
+                                        class="RowButton-sc-xxkq4e-0 hIehTT"
+                                      ></div>
+                                      <div
+                                        style="display: none"
+                                        id="onClickHintspotify:album:007DWn799UWvfY1wwZeENR"
+                                      ></div>
+                                      <div
+                                        class="Areas__HeaderSideArea-sc-8gfrea-1 ljvfQS"
+                                      >
+                                        <div
+                                          class="Areas__HeaderSideAreaFlexContainer-sc-8gfrea-2 hvZiQp"
+                                        >
+                                          <div
+                                            class="vreceNX3ABcxyddeS83B nZSNG58XEPTX69mkNi9n g3kBhX1E4EYEC2NFhhxG"
+                                            style="width: 48px; height: 48px"
+                                          >
+                                            <img
+                                              aria-hidden="true"
+                                              draggable="false"
+                                              loading="eager"
+                                              src="https://i.scdn.co/image/ab67616d000011eb280689ecc5e4b2038bb5e4bd"
+                                              data-testid="entity-image"
+                                              alt="i am > i was"
+                                              class="mMx2LUixlnN_Fu45JpFB iJp40IxKg6emF6KYJ414 yOKoknIYYzAE90pe7_SE Yn2Ei5QZn19gria6LjZj"
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="Areas__HeaderArea-sc-8gfrea-3 TJKQw"
+                                      >
+                                        <div
+                                          class="Areas__InteractiveArea-sc-8gfrea-0 Areas__Column-sc-8gfrea-5 bJSfgC jwUvtM"
+                                        >
+                                          <p
+                                            id="listrow-title-spotify:album:007DWn799UWvfY1wwZeENR"
+                                            data-encore-id="type"
+                                            class="Type__TypeElement-sc-goli3j-0 fZDcWX ListRowTitle__ListRowType-sc-1xe2if1-1 fkzPZy d33vqKRxohS9RxzCic1D gj1L_SVM_H8GteWMdEF_"
+                                            dir="auto"
+                                          >
+                                            <span
+                                              class="ListRowTitle__LineClamp-sc-1xe2if1-0 jjpOuK"
+                                              >i am &gt; i was</span
+                                            >
+                                          </p>
+                                          <div class="LSrBzBljgLeDhcm3Soye">
+                                            <p
+                                              data-encore-id="type"
+                                              id="listrow-subtitle-spotify:album:007DWn799UWvfY1wwZeENR"
+                                              class="Type__TypeElement-sc-goli3j-0 bDHxRN ListRowDetails__ListRowDetailType-sc-sozu4l-0 ekBKJj d33vqKRxohS9RxzCic1D"
+                                              dir="auto"
+                                            >
+                                              <span
+                                                class="ListRowDetails__LineClamp-sc-sozu4l-1 hITFAK"
+                                                ><span
+                                                  class="HdTF8gsRm5MgWvEYlokG"
+                                                ></span
+                                                >Álbum • 21 Savage</span
+                                              >
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!--==================== 8º BOX-OPTION ON VERTICAL SECTION ====================-->
+                                  <li
+                                    role="listitem"
+                                    draggable="true"
+                                    class="NxEINIJHGytq4gF1r2N1 qEiVyQ28VnOKb0LeijqL"
+                                    aria-setsize="127"
+                                    aria-posinset="77"
+                                  >
+                                    <div
+                                      class="Box__BoxComponent-sc-y4nds-0 jByoWw Box-sc-8t9c76-0 chaEYk ojrThQm1wxR2gZ6GntJB"
+                                      data-encore-id="listRow"
+                                      role="group"
+                                      aria-labelledby="listrow-title-spotify:album:0mQ8UQ4rDIwQLZEGCksde5"
+                                    >
+                                      <div
+                                        role="button"
+                                        aria-disabled="false"
+                                        aria-labelledby="listrow-title-spotify:album:0mQ8UQ4rDIwQLZEGCksde5 listrow-subtitle-spotify:album:0mQ8UQ4rDIwQLZEGCksde5"
+                                        aria-describedby="onClickHintspotify:album:0mQ8UQ4rDIwQLZEGCksde5"
+                                        tabindex="-1"
+                                        class="RowButton-sc-xxkq4e-0 hIehTT"
+                                      ></div>
+                                      <div
+                                        style="display: none"
+                                        id="onClickHintspotify:album:0mQ8UQ4rDIwQLZEGCksde5"
+                                      ></div>
+                                      <div
+                                        class="Areas__HeaderSideArea-sc-8gfrea-1 ljvfQS"
+                                      >
+                                        <div
+                                          class="Areas__HeaderSideAreaFlexContainer-sc-8gfrea-2 hvZiQp"
+                                        >
+                                          <div
+                                            class="vreceNX3ABcxyddeS83B nZSNG58XEPTX69mkNi9n g3kBhX1E4EYEC2NFhhxG"
+                                            style="
+                                              width: 48px;
+                                              height: 48px;
+                                              --extracted-entity-color: #403030;
+                                            "
+                                          >
+                                            <img
+                                              aria-hidden="true"
+                                              draggable="false"
+                                              loading="eager"
+                                              src="https://i.scdn.co/image/ab67616d000011ebf7db204b2e927befab758224"
+                                              data-testid="entity-image"
+                                              alt="Ipanema"
+                                              class="mMx2LUixlnN_Fu45JpFB iJp40IxKg6emF6KYJ414 Yn2Ei5QZn19gria6LjZj"
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="Areas__HeaderArea-sc-8gfrea-3 TJKQw"
+                                      >
+                                        <div
+                                          class="Areas__InteractiveArea-sc-8gfrea-0 Areas__Column-sc-8gfrea-5 bJSfgC jwUvtM"
+                                        >
+                                          <p
+                                            id="listrow-title-spotify:album:0mQ8UQ4rDIwQLZEGCksde5"
+                                            data-encore-id="type"
+                                            class="Type__TypeElement-sc-goli3j-0 fZDcWX ListRowTitle__ListRowType-sc-1xe2if1-1 fkzPZy d33vqKRxohS9RxzCic1D gj1L_SVM_H8GteWMdEF_"
+                                            dir="auto"
+                                          >
+                                            <span
+                                              class="ListRowTitle__LineClamp-sc-1xe2if1-0 jjpOuK"
+                                              >Ipanema</span
+                                            >
+                                          </p>
+                                          <div class="LSrBzBljgLeDhcm3Soye">
+                                            <p
+                                              data-encore-id="type"
+                                              id="listrow-subtitle-spotify:album:0mQ8UQ4rDIwQLZEGCksde5"
+                                              class="Type__TypeElement-sc-goli3j-0 bDHxRN ListRowDetails__ListRowDetailType-sc-sozu4l-0 ekBKJj d33vqKRxohS9RxzCic1D"
+                                              dir="auto"
+                                            >
+                                              <span
+                                                class="ListRowDetails__LineClamp-sc-sozu4l-1 hITFAK"
+                                                ><span
+                                                  class="HdTF8gsRm5MgWvEYlokG"
+                                                ></span
+                                                >Álbum • Saib</span
+                                              >
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!--==================== 9º BOX-OPTION ON VERTICAL SECTION ====================-->
+                                  <!--==================== 10º BOX-OPTION ON VERTICAL SECTION ====================-->
+                                  <li
+                                    role="listitem"
+                                    draggable="true"
+                                    class="NxEINIJHGytq4gF1r2N1 qEiVyQ28VnOKb0LeijqL"
+                                    aria-setsize="127"
+                                    aria-posinset="80"
+                                  >
+                                    <div
+                                      class="Box__BoxComponent-sc-y4nds-0 jByoWw Box-sc-8t9c76-0 chaEYk ojrThQm1wxR2gZ6GntJB"
+                                      data-encore-id="listRow"
+                                      role="group"
+                                      aria-labelledby="listrow-title-spotify:artist:7pbDxGE6nQSZVfiFdq9lOL"
+                                    >
+                                      <div
+                                        role="button"
+                                        aria-disabled="false"
+                                        aria-labelledby="listrow-title-spotify:artist:7pbDxGE6nQSZVfiFdq9lOL listrow-subtitle-spotify:artist:7pbDxGE6nQSZVfiFdq9lOL"
+                                        aria-describedby="onClickHintspotify:artist:7pbDxGE6nQSZVfiFdq9lOL"
+                                        tabindex="-1"
+                                        class="RowButton-sc-xxkq4e-0 hIehTT"
+                                      ></div>
+                                      <div
+                                        style="display: none"
+                                        id="onClickHintspotify:artist:7pbDxGE6nQSZVfiFdq9lOL"
+                                      ></div>
+                                      <div
+                                        class="Areas__HeaderSideArea-sc-8gfrea-1 ljvfQS"
+                                      >
+                                        <div
+                                          class="Areas__HeaderSideAreaFlexContainer-sc-8gfrea-2 hvZiQp"
+                                        >
+                                          <div
+                                            class="vreceNX3ABcxyddeS83B nZSNG58XEPTX69mkNi9n OadpZJiOaGfX6Qp4j6n5 g3kBhX1E4EYEC2NFhhxG"
+                                            style="
+                                              width: 48px;
+                                              height: 48px;
+                                              --extracted-entity-color: #bb5a30;
+                                            "
+                                          >
+                                            <img
+                                              aria-hidden="true"
+                                              draggable="false"
+                                              loading="eager"
+                                              src="https://i.scdn.co/image/ab6761610000101fffb90f91cb2f487d7309f7bc"
+                                              data-testid="entity-image"
+                                              alt="Rex Orange County"
+                                              class="mMx2LUixlnN_Fu45JpFB iJp40IxKg6emF6KYJ414 Yn2Ei5QZn19gria6LjZj"
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="Areas__HeaderArea-sc-8gfrea-3 TJKQw"
+                                      >
+                                        <div
+                                          class="Areas__InteractiveArea-sc-8gfrea-0 Areas__Column-sc-8gfrea-5 bJSfgC jwUvtM"
+                                        >
+                                          <p
+                                            id="listrow-title-spotify:artist:7pbDxGE6nQSZVfiFdq9lOL"
+                                            data-encore-id="type"
+                                            class="Type__TypeElement-sc-goli3j-0 fZDcWX ListRowTitle__ListRowType-sc-1xe2if1-1 fkzPZy d33vqKRxohS9RxzCic1D gj1L_SVM_H8GteWMdEF_"
+                                            dir="auto"
+                                          >
+                                            <span
+                                              class="ListRowTitle__LineClamp-sc-1xe2if1-0 jjpOuK"
+                                              >Rex Orange County</span
+                                            >
+                                          </p>
+                                          <div class="LSrBzBljgLeDhcm3Soye">
+                                            <p
+                                              data-encore-id="type"
+                                              id="listrow-subtitle-spotify:artist:7pbDxGE6nQSZVfiFdq9lOL"
+                                              class="Type__TypeElement-sc-goli3j-0 bDHxRN ListRowDetails__ListRowDetailType-sc-sozu4l-0 ekBKJj d33vqKRxohS9RxzCic1D"
+                                              dir="auto"
+                                            >
+                                              <span
+                                                class="ListRowDetails__LineClamp-sc-sozu4l-1 hITFAK"
+                                                ><span
+                                                  class="HdTF8gsRm5MgWvEYlokG"
+                                                ></span
+                                                >Artista</span
+                                              >
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!--==================== 11º BOX-OPTION ON VERTICAL SECTION ====================-->
+                                  <li
+                                    role="listitem"
+                                    style="--ylx-folder-depth: 0"
+                                    draggable="true"
+                                    class="NxEINIJHGytq4gF1r2N1 qEiVyQ28VnOKb0LeijqL"
+                                    aria-setsize="127"
+                                    aria-posinset="83"
+                                  >
+                                    <div
+                                      class="Box__BoxComponent-sc-y4nds-0 jByoWw Box-sc-8t9c76-0 chaEYk ojrThQm1wxR2gZ6GntJB"
+                                      data-encore-id="listRow"
+                                      role="group"
+                                      aria-labelledby="listrow-title-spotify:playlist:1FWEcR4EMA9YtgT979q85y"
+                                    >
+                                      <div
+                                        role="button"
+                                        aria-disabled="false"
+                                        aria-labelledby="listrow-title-spotify:playlist:1FWEcR4EMA9YtgT979q85y listrow-subtitle-spotify:playlist:1FWEcR4EMA9YtgT979q85y"
+                                        aria-describedby="onClickHintspotify:playlist:1FWEcR4EMA9YtgT979q85y"
+                                        tabindex="-1"
+                                        class="RowButton-sc-xxkq4e-0 hIehTT"
+                                      ></div>
+                                      <div
+                                        style="display: none"
+                                        id="onClickHintspotify:playlist:1FWEcR4EMA9YtgT979q85y"
+                                      ></div>
+                                      <div
+                                        class="Areas__HeaderSideArea-sc-8gfrea-1 ljvfQS"
+                                      >
+                                        <div
+                                          class="Areas__HeaderSideAreaFlexContainer-sc-8gfrea-2 hvZiQp"
+                                        >
+                                          <div
+                                            class="vreceNX3ABcxyddeS83B nZSNG58XEPTX69mkNi9n g3kBhX1E4EYEC2NFhhxG"
+                                            style="
+                                              width: 48px;
+                                              height: 48px;
+                                              --extracted-entity-color: #1868d0;
+                                            "
+                                          >
+                                            <img
+                                              aria-hidden="true"
+                                              draggable="false"
+                                              loading="eager"
+                                              src="https://i2o.scdn.co/image/ab67706c0000cfa330d76fdef4a151a174fccd55"
+                                              data-testid="entity-image"
+                                              alt="Thinkin bout you"
+                                              class="mMx2LUixlnN_Fu45JpFB iJp40IxKg6emF6KYJ414 Yn2Ei5QZn19gria6LjZj"
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="Areas__HeaderArea-sc-8gfrea-3 TJKQw"
+                                      >
+                                        <div
+                                          class="Areas__InteractiveArea-sc-8gfrea-0 Areas__Column-sc-8gfrea-5 bJSfgC jwUvtM"
+                                        >
+                                          <p
+                                            id="listrow-title-spotify:playlist:1FWEcR4EMA9YtgT979q85y"
+                                            data-encore-id="type"
+                                            class="Type__TypeElement-sc-goli3j-0 fZDcWX ListRowTitle__ListRowType-sc-1xe2if1-1 fkzPZy d33vqKRxohS9RxzCic1D gj1L_SVM_H8GteWMdEF_"
+                                            dir="auto"
+                                          >
+                                            <span
+                                              class="ListRowTitle__LineClamp-sc-1xe2if1-0 jjpOuK"
+                                              >Thinkin bout you</span
+                                            >
+                                          </p>
+                                          <div class="LSrBzBljgLeDhcm3Soye">
+                                            <p
+                                              data-encore-id="type"
+                                              id="listrow-subtitle-spotify:playlist:1FWEcR4EMA9YtgT979q85y"
+                                              class="Type__TypeElement-sc-goli3j-0 bDHxRN ListRowDetails__ListRowDetailType-sc-sozu4l-0 ekBKJj d33vqKRxohS9RxzCic1D"
+                                              dir="auto"
+                                            >
+                                              <span
+                                                class="ListRowDetails__LineClamp-sc-sozu4l-1 hITFAK"
+                                                ><span
+                                                  class="HdTF8gsRm5MgWvEYlokG"
+                                                ></span
+                                                >Playlist • Gabie</span
+                                              >
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!--==================== 12º BOX-OPTION ON VERTICAL SECTION ====================-->
+                                  <li
+                                    role="listitem"
+                                    style="--ylx-folder-depth: 0"
+                                    draggable="true"
+                                    class="NxEINIJHGytq4gF1r2N1 qEiVyQ28VnOKb0LeijqL"
+                                    aria-setsize="127"
+                                    aria-posinset="84"
+                                  >
+                                    <div
+                                      class="Box__BoxComponent-sc-y4nds-0 jByoWw Box-sc-8t9c76-0 chaEYk ojrThQm1wxR2gZ6GntJB"
+                                      data-encore-id="listRow"
+                                      role="group"
+                                      aria-labelledby="listrow-title-spotify:playlist:6kAxSlBRcsP32jo8bOR03t"
+                                    >
+                                      <div
+                                        role="button"
+                                        aria-disabled="false"
+                                        aria-labelledby="listrow-title-spotify:playlist:6kAxSlBRcsP32jo8bOR03t listrow-subtitle-spotify:playlist:6kAxSlBRcsP32jo8bOR03t"
+                                        aria-describedby="onClickHintspotify:playlist:6kAxSlBRcsP32jo8bOR03t"
+                                        tabindex="-1"
+                                        class="RowButton-sc-xxkq4e-0 hIehTT"
+                                      ></div>
+                                      <div
+                                        style="display: none"
+                                        id="onClickHintspotify:playlist:6kAxSlBRcsP32jo8bOR03t"
+                                      ></div>
+                                      <div
+                                        class="Areas__HeaderSideArea-sc-8gfrea-1 ljvfQS"
+                                      >
+                                        <div
+                                          class="Areas__HeaderSideAreaFlexContainer-sc-8gfrea-2 hvZiQp"
+                                        >
+                                          <div
+                                            class="vreceNX3ABcxyddeS83B nZSNG58XEPTX69mkNi9n g3kBhX1E4EYEC2NFhhxG"
+                                            style="
+                                              width: 48px;
+                                              height: 48px;
+                                              --extracted-entity-color: #203060;
+                                            "
+                                          >
+                                            <img
+                                              aria-hidden="true"
+                                              draggable="false"
+                                              loading="eager"
+                                              src="https://i2o.scdn.co/image/ab67706c0000cfa38ae35f9d37d0d823aa47c9b2"
+                                              data-testid="entity-image"
+                                              alt='<div class="error"></div>'
+                                              class="mMx2LUixlnN_Fu45JpFB iJp40IxKg6emF6KYJ414 Yn2Ei5QZn19gria6LjZj"
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="Areas__HeaderArea-sc-8gfrea-3 TJKQw"
+                                      >
+                                        <div
+                                          class="Areas__InteractiveArea-sc-8gfrea-0 Areas__Column-sc-8gfrea-5 bJSfgC jwUvtM"
+                                        >
+                                          <p
+                                            id="listrow-title-spotify:playlist:6kAxSlBRcsP32jo8bOR03t"
+                                            data-encore-id="type"
+                                            class="Type__TypeElement-sc-goli3j-0 fZDcWX ListRowTitle__ListRowType-sc-1xe2if1-1 fkzPZy d33vqKRxohS9RxzCic1D gj1L_SVM_H8GteWMdEF_"
+                                            dir="auto"
+                                          >
+                                            <span
+                                              class="ListRowTitle__LineClamp-sc-1xe2if1-0 jjpOuK"
+                                              >&lt;div
+                                              class="error"&gt;&lt;/div&gt;</span
+                                            >
+                                          </p>
+                                          <div class="LSrBzBljgLeDhcm3Soye">
+                                            <p
+                                              data-encore-id="type"
+                                              id="listrow-subtitle-spotify:playlist:6kAxSlBRcsP32jo8bOR03t"
+                                              class="Type__TypeElement-sc-goli3j-0 bDHxRN ListRowDetails__ListRowDetailType-sc-sozu4l-0 ekBKJj d33vqKRxohS9RxzCic1D"
+                                              dir="auto"
+                                            >
+                                              <span
+                                                class="ListRowDetails__LineClamp-sc-sozu4l-1 hITFAK"
+                                                ><span
+                                                  class="HdTF8gsRm5MgWvEYlokG"
+                                                ></span
+                                                >Playlist • Gabie</span
+                                              >
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!--==================== 13º BOX-OPTION ON VERTICAL SECTION ====================-->
+                                  <li
+                                    role="listitem"
+                                    style="--ylx-folder-depth: 0"
+                                    draggable="true"
+                                    class="NxEINIJHGytq4gF1r2N1 qEiVyQ28VnOKb0LeijqL"
+                                    aria-setsize="127"
+                                    aria-posinset="86"
+                                  >
+                                    <div
+                                      class="Box__BoxComponent-sc-y4nds-0 jByoWw Box-sc-8t9c76-0 chaEYk ojrThQm1wxR2gZ6GntJB"
+                                      data-encore-id="listRow"
+                                      role="group"
+                                      aria-labelledby="listrow-title-spotify:playlist:6LsLoh8rRlXEencw3E70ui"
+                                    >
+                                      <div
+                                        role="button"
+                                        aria-disabled="false"
+                                        aria-labelledby="listrow-title-spotify:playlist:6LsLoh8rRlXEencw3E70ui listrow-subtitle-spotify:playlist:6LsLoh8rRlXEencw3E70ui"
+                                        aria-describedby="onClickHintspotify:playlist:6LsLoh8rRlXEencw3E70ui"
+                                        tabindex="-1"
+                                        class="RowButton-sc-xxkq4e-0 hIehTT"
+                                      ></div>
+                                      <div
+                                        style="display: none"
+                                        id="onClickHintspotify:playlist:6LsLoh8rRlXEencw3E70ui"
+                                      ></div>
+                                      <div
+                                        class="Areas__HeaderSideArea-sc-8gfrea-1 ljvfQS"
+                                      >
+                                        <div
+                                          class="Areas__HeaderSideAreaFlexContainer-sc-8gfrea-2 hvZiQp"
+                                        >
+                                          <div
+                                            class="vreceNX3ABcxyddeS83B nZSNG58XEPTX69mkNi9n g3kBhX1E4EYEC2NFhhxG"
+                                            style="
+                                              width: 48px;
+                                              height: 48px;
+                                              --extracted-entity-color: #304870;
+                                            "
+                                          >
+                                            <img
+                                              aria-hidden="true"
+                                              draggable="false"
+                                              loading="eager"
+                                              src="https://i2o.scdn.co/image/ab67706c0000cfa390af945e9f41d48b65978e6b"
+                                              data-testid="entity-image"
+                                              alt="Brazil"
+                                              class="mMx2LUixlnN_Fu45JpFB iJp40IxKg6emF6KYJ414 Yn2Ei5QZn19gria6LjZj"
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="Areas__HeaderArea-sc-8gfrea-3 TJKQw"
+                                      >
+                                        <div
+                                          class="Areas__InteractiveArea-sc-8gfrea-0 Areas__Column-sc-8gfrea-5 bJSfgC jwUvtM"
+                                        >
+                                          <p
+                                            id="listrow-title-spotify:playlist:6LsLoh8rRlXEencw3E70ui"
+                                            data-encore-id="type"
+                                            class="Type__TypeElement-sc-goli3j-0 fZDcWX ListRowTitle__ListRowType-sc-1xe2if1-1 fkzPZy d33vqKRxohS9RxzCic1D gj1L_SVM_H8GteWMdEF_"
+                                            dir="auto"
+                                          >
+                                            <span
+                                              class="ListRowTitle__LineClamp-sc-1xe2if1-0 jjpOuK"
+                                              >Brazil</span
+                                            >
+                                          </p>
+                                          <div class="LSrBzBljgLeDhcm3Soye">
+                                            <p
+                                              data-encore-id="type"
+                                              id="listrow-subtitle-spotify:playlist:6LsLoh8rRlXEencw3E70ui"
+                                              class="Type__TypeElement-sc-goli3j-0 bDHxRN ListRowDetails__ListRowDetailType-sc-sozu4l-0 ekBKJj d33vqKRxohS9RxzCic1D"
+                                              dir="auto"
+                                            >
+                                              <span
+                                                class="ListRowDetails__LineClamp-sc-sozu4l-1 hITFAK"
+                                                ><span
+                                                  class="HdTF8gsRm5MgWvEYlokG"
+                                                ></span
+                                                >Playlist • Gabie</span
+                                              >
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!--==================== 14º BOX-OPTION ON VERTICAL SECTION ====================-->
+                                  <li
+                                    role="listitem"
+                                    style="--ylx-folder-depth: 0"
+                                    draggable="true"
+                                    class="NxEINIJHGytq4gF1r2N1 qEiVyQ28VnOKb0LeijqL"
+                                    aria-setsize="127"
+                                    aria-posinset="79"
+                                  >
+                                    <div
+                                      class="Box__BoxComponent-sc-y4nds-0 jByoWw Box-sc-8t9c76-0 chaEYk ojrThQm1wxR2gZ6GntJB"
+                                      data-encore-id="listRow"
+                                      role="group"
+                                      aria-labelledby="listrow-title-spotify:playlist:37i9dQZF1DZ06evO1SVXaM"
+                                    >
+                                      <div
+                                        role="button"
+                                        aria-disabled="false"
+                                        aria-labelledby="listrow-title-spotify:playlist:37i9dQZF1DZ06evO1SVXaM listrow-subtitle-spotify:playlist:37i9dQZF1DZ06evO1SVXaM"
+                                        aria-describedby="onClickHintspotify:playlist:37i9dQZF1DZ06evO1SVXaM"
+                                        tabindex="-1"
+                                        class="RowButton-sc-xxkq4e-0 hIehTT"
+                                      ></div>
+                                      <div
+                                        style="display: none"
+                                        id="onClickHintspotify:playlist:37i9dQZF1DZ06evO1SVXaM"
+                                      ></div>
+                                      <div
+                                        class="Areas__HeaderSideArea-sc-8gfrea-1 ljvfQS"
+                                      >
+                                        <div
+                                          class="Areas__HeaderSideAreaFlexContainer-sc-8gfrea-2 hvZiQp"
+                                        >
+                                          <div
+                                            class="vreceNX3ABcxyddeS83B nZSNG58XEPTX69mkNi9n g3kBhX1E4EYEC2NFhhxG"
+                                            style="
+                                              width: 48px;
+                                              height: 48px;
+                                              --extracted-entity-color: #c83888;
+                                            "
+                                          >
+                                            <img
+                                              aria-hidden="true"
+                                              draggable="false"
+                                              loading="eager"
+                                              src="https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO1SVXaM-default.jpg"
+                                              data-testid="entity-image"
+                                              alt="This Is Michael Jackson"
+                                              class="mMx2LUixlnN_Fu45JpFB iJp40IxKg6emF6KYJ414 Yn2Ei5QZn19gria6LjZj"
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="Areas__HeaderArea-sc-8gfrea-3 TJKQw"
+                                      >
+                                        <div
+                                          class="Areas__InteractiveArea-sc-8gfrea-0 Areas__Column-sc-8gfrea-5 bJSfgC jwUvtM"
+                                        >
+                                          <p
+                                            id="listrow-title-spotify:playlist:37i9dQZF1DZ06evO1SVXaM"
+                                            data-encore-id="type"
+                                            class="Type__TypeElement-sc-goli3j-0 fZDcWX ListRowTitle__ListRowType-sc-1xe2if1-1 fkzPZy d33vqKRxohS9RxzCic1D gj1L_SVM_H8GteWMdEF_"
+                                            dir="auto"
+                                          >
+                                            <span
+                                              class="ListRowTitle__LineClamp-sc-1xe2if1-0 jjpOuK"
+                                              >This Is Michael Jackson</span
+                                            >
+                                          </p>
+                                          <div class="LSrBzBljgLeDhcm3Soye">
+                                            <p
+                                              data-encore-id="type"
+                                              id="listrow-subtitle-spotify:playlist:37i9dQZF1DZ06evO1SVXaM"
+                                              class="Type__TypeElement-sc-goli3j-0 bDHxRN ListRowDetails__ListRowDetailType-sc-sozu4l-0 ekBKJj d33vqKRxohS9RxzCic1D"
+                                              dir="auto"
+                                            >
+                                              <span
+                                                class="ListRowDetails__LineClamp-sc-sozu4l-1 hITFAK"
+                                                ><span
+                                                  class="HdTF8gsRm5MgWvEYlokG"
+                                                ></span
+                                                >Playlist • Spotify</span
+                                              >
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!--==================== 15º BOX-OPTION ON VERTICAL SECTION ====================-->
+                                  <li
+                                    role="listitem"
+                                    style="--ylx-folder-depth: 0"
+                                    draggable="true"
+                                    class="NxEINIJHGytq4gF1r2N1 qEiVyQ28VnOKb0LeijqL"
+                                    aria-setsize="127"
+                                    aria-posinset="62"
+                                  >
+                                    <div
+                                      class="Box__BoxComponent-sc-y4nds-0 jByoWw Box-sc-8t9c76-0 chaEYk ojrThQm1wxR2gZ6GntJB"
+                                      data-encore-id="listRow"
+                                      role="group"
+                                      aria-labelledby="listrow-title-spotify:playlist:37i9dQZF1DZ06evO0nT692"
+                                    >
+                                      <div
+                                        role="button"
+                                        aria-disabled="false"
+                                        aria-labelledby="listrow-title-spotify:playlist:37i9dQZF1DZ06evO0nT692 listrow-subtitle-spotify:playlist:37i9dQZF1DZ06evO0nT692"
+                                        aria-describedby="onClickHintspotify:playlist:37i9dQZF1DZ06evO0nT692"
+                                        tabindex="-1"
+                                        class="RowButton-sc-xxkq4e-0 hIehTT"
+                                      ></div>
+                                      <div
+                                        style="display: none"
+                                        id="onClickHintspotify:playlist:37i9dQZF1DZ06evO0nT692"
+                                      ></div>
+                                      <div
+                                        class="Areas__HeaderSideArea-sc-8gfrea-1 ljvfQS"
+                                      >
+                                        <div
+                                          class="Areas__HeaderSideAreaFlexContainer-sc-8gfrea-2 hvZiQp"
+                                        >
+                                          <div
+                                            class="vreceNX3ABcxyddeS83B nZSNG58XEPTX69mkNi9n g3kBhX1E4EYEC2NFhhxG"
+                                            style="
+                                              width: 48px;
+                                              height: 48px;
+                                              --extracted-entity-color: #b83040;
+                                            "
+                                          >
+                                            <img
+                                              aria-hidden="true"
+                                              draggable="false"
+                                              loading="eager"
+                                              src="https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO0nT692-default.jpg"
+                                              data-testid="entity-image"
+                                              alt="This Is Red Hot Chili Peppers"
+                                              class="mMx2LUixlnN_Fu45JpFB iJp40IxKg6emF6KYJ414 Yn2Ei5QZn19gria6LjZj"
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="Areas__HeaderArea-sc-8gfrea-3 TJKQw"
+                                      >
+                                        <div
+                                          class="Areas__InteractiveArea-sc-8gfrea-0 Areas__Column-sc-8gfrea-5 bJSfgC jwUvtM"
+                                        >
+                                          <p
+                                            id="listrow-title-spotify:playlist:37i9dQZF1DZ06evO0nT692"
+                                            data-encore-id="type"
+                                            class="Type__TypeElement-sc-goli3j-0 fZDcWX ListRowTitle__ListRowType-sc-1xe2if1-1 fkzPZy d33vqKRxohS9RxzCic1D gj1L_SVM_H8GteWMdEF_"
+                                            dir="auto"
+                                          >
+                                            <span
+                                              class="ListRowTitle__LineClamp-sc-1xe2if1-0 jjpOuK"
+                                              >This Is Red Hot Chili
+                                              Peppers</span
+                                            >
+                                          </p>
+                                          <div class="LSrBzBljgLeDhcm3Soye">
+                                            <p
+                                              data-encore-id="type"
+                                              id="listrow-subtitle-spotify:playlist:37i9dQZF1DZ06evO0nT692"
+                                              class="Type__TypeElement-sc-goli3j-0 bDHxRN ListRowDetails__ListRowDetailType-sc-sozu4l-0 ekBKJj d33vqKRxohS9RxzCic1D"
+                                              dir="auto"
+                                            >
+                                              <span
+                                                class="ListRowDetails__LineClamp-sc-sozu4l-1 hITFAK"
+                                                ><span
+                                                  class="HdTF8gsRm5MgWvEYlokG"
+                                                ></span
+                                                >Playlist • Spotify</span
+                                              >
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!--==================== 16º BOX-OPTION ON VERTICAL SECTION ====================-->
+                                  <li
+                                    role="listitem"
+                                    style="--ylx-folder-depth: 0"
+                                    draggable="true"
+                                    class="NxEINIJHGytq4gF1r2N1 qEiVyQ28VnOKb0LeijqL"
+                                    aria-setsize="127"
+                                    aria-posinset="61"
+                                  >
+                                    <div
+                                      class="Box__BoxComponent-sc-y4nds-0 jByoWw Box-sc-8t9c76-0 chaEYk ojrThQm1wxR2gZ6GntJB"
+                                      data-encore-id="listRow"
+                                      role="group"
+                                      aria-labelledby="listrow-title-spotify:playlist:37i9dQZF1DWWwzidNQX6jx"
+                                    >
+                                      <div
+                                        role="button"
+                                        aria-disabled="false"
+                                        aria-labelledby="listrow-title-spotify:playlist:37i9dQZF1DWWwzidNQX6jx listrow-subtitle-spotify:playlist:37i9dQZF1DWWwzidNQX6jx"
+                                        aria-describedby="onClickHintspotify:playlist:37i9dQZF1DWWwzidNQX6jx"
+                                        tabindex="-1"
+                                        class="RowButton-sc-xxkq4e-0 hIehTT"
+                                      ></div>
+                                      <div
+                                        style="display: none"
+                                        id="onClickHintspotify:playlist:37i9dQZF1DWWwzidNQX6jx"
+                                      ></div>
+                                      <div
+                                        class="Areas__HeaderSideArea-sc-8gfrea-1 ljvfQS"
+                                      >
+                                        <div
+                                          class="Areas__HeaderSideAreaFlexContainer-sc-8gfrea-2 hvZiQp"
+                                        >
+                                          <div
+                                            class="vreceNX3ABcxyddeS83B nZSNG58XEPTX69mkNi9n g3kBhX1E4EYEC2NFhhxG"
+                                            style="
+                                              width: 48px;
+                                              height: 48px;
+                                              --extracted-entity-color: #697989;
+                                            "
+                                          >
+                                            <img
+                                              aria-hidden="true"
+                                              draggable="false"
+                                              loading="eager"
+                                              src="https://i.scdn.co/image/ab67706f000000027b715dc15e447e2850c9e983"
+                                              data-testid="entity-image"
+                                              alt="70s Rock Anthems"
+                                              class="mMx2LUixlnN_Fu45JpFB iJp40IxKg6emF6KYJ414 Yn2Ei5QZn19gria6LjZj"
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="Areas__HeaderArea-sc-8gfrea-3 TJKQw"
+                                      >
+                                        <div
+                                          class="Areas__InteractiveArea-sc-8gfrea-0 Areas__Column-sc-8gfrea-5 bJSfgC jwUvtM"
+                                        >
+                                          <p
+                                            id="listrow-title-spotify:playlist:37i9dQZF1DWWwzidNQX6jx"
+                                            data-encore-id="type"
+                                            class="Type__TypeElement-sc-goli3j-0 fZDcWX ListRowTitle__ListRowType-sc-1xe2if1-1 fkzPZy d33vqKRxohS9RxzCic1D gj1L_SVM_H8GteWMdEF_"
+                                            dir="auto"
+                                          >
+                                            <span
+                                              class="ListRowTitle__LineClamp-sc-1xe2if1-0 jjpOuK"
+                                              >70s Rock Anthems</span
+                                            >
+                                          </p>
+                                          <div class="LSrBzBljgLeDhcm3Soye">
+                                            <p
+                                              data-encore-id="type"
+                                              id="listrow-subtitle-spotify:playlist:37i9dQZF1DWWwzidNQX6jx"
+                                              class="Type__TypeElement-sc-goli3j-0 bDHxRN ListRowDetails__ListRowDetailType-sc-sozu4l-0 ekBKJj d33vqKRxohS9RxzCic1D"
+                                              dir="auto"
+                                            >
+                                              <span
+                                                class="ListRowDetails__LineClamp-sc-sozu4l-1 hITFAK"
+                                                ><span
+                                                  class="HdTF8gsRm5MgWvEYlokG"
+                                                ></span
+                                                >Playlist • Spotify</span
+                                              >
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!--==================== 17º BOX-OPTION ON VERTICAL SECTION ====================-->
+                                  <li
+                                    role="listitem"
+                                    draggable="true"
+                                    class="NxEINIJHGytq4gF1r2N1 qEiVyQ28VnOKb0LeijqL"
+                                    aria-setsize="127"
+                                    aria-posinset="60"
+                                  >
+                                    <div
+                                      class="Box__BoxComponent-sc-y4nds-0 jByoWw Box-sc-8t9c76-0 chaEYk ojrThQm1wxR2gZ6GntJB"
+                                      data-encore-id="listRow"
+                                      role="group"
+                                      aria-labelledby="listrow-title-spotify:artist:7Bokk7F8hq4P8wWwEO5mZy"
+                                    >
+                                      <div
+                                        role="button"
+                                        aria-disabled="false"
+                                        aria-labelledby="listrow-title-spotify:artist:7Bokk7F8hq4P8wWwEO5mZy listrow-subtitle-spotify:artist:7Bokk7F8hq4P8wWwEO5mZy"
+                                        aria-describedby="onClickHintspotify:artist:7Bokk7F8hq4P8wWwEO5mZy"
+                                        tabindex="-1"
+                                        class="RowButton-sc-xxkq4e-0 hIehTT"
+                                      ></div>
+                                      <div
+                                        style="display: none"
+                                        id="onClickHintspotify:artist:7Bokk7F8hq4P8wWwEO5mZy"
+                                      ></div>
+                                      <div
+                                        class="Areas__HeaderSideArea-sc-8gfrea-1 ljvfQS"
+                                      >
+                                        <div
+                                          class="Areas__HeaderSideAreaFlexContainer-sc-8gfrea-2 hvZiQp"
+                                        >
+                                          <div
+                                            class="vreceNX3ABcxyddeS83B nZSNG58XEPTX69mkNi9n OadpZJiOaGfX6Qp4j6n5 g3kBhX1E4EYEC2NFhhxG"
+                                            style="
+                                              width: 48px;
+                                              height: 48px;
+                                              --extracted-entity-color: #eb1710;
+                                            "
+                                          >
+                                            <img
+                                              aria-hidden="true"
+                                              draggable="false"
+                                              loading="eager"
+                                              src="https://i.scdn.co/image/ab6761610000101f29cd4ad19197f784a42a8e26"
+                                              data-testid="entity-image"
+                                              alt="はしメロ"
+                                              class="mMx2LUixlnN_Fu45JpFB iJp40IxKg6emF6KYJ414 Yn2Ei5QZn19gria6LjZj"
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="Areas__HeaderArea-sc-8gfrea-3 TJKQw"
+                                      >
+                                        <div
+                                          class="Areas__InteractiveArea-sc-8gfrea-0 Areas__Column-sc-8gfrea-5 bJSfgC jwUvtM"
+                                        >
+                                          <p
+                                            id="listrow-title-spotify:artist:7Bokk7F8hq4P8wWwEO5mZy"
+                                            data-encore-id="type"
+                                            class="Type__TypeElement-sc-goli3j-0 fZDcWX ListRowTitle__ListRowType-sc-1xe2if1-1 fkzPZy d33vqKRxohS9RxzCic1D gj1L_SVM_H8GteWMdEF_"
+                                            dir="auto"
+                                          >
+                                            <span
+                                              class="ListRowTitle__LineClamp-sc-1xe2if1-0 jjpOuK"
+                                              >はしメロ</span
+                                            >
+                                          </p>
+                                          <div class="LSrBzBljgLeDhcm3Soye">
+                                            <p
+                                              data-encore-id="type"
+                                              id="listrow-subtitle-spotify:artist:7Bokk7F8hq4P8wWwEO5mZy"
+                                              class="Type__TypeElement-sc-goli3j-0 bDHxRN ListRowDetails__ListRowDetailType-sc-sozu4l-0 ekBKJj d33vqKRxohS9RxzCic1D"
+                                              dir="auto"
+                                            >
+                                              <span
+                                                class="ListRowDetails__LineClamp-sc-sozu4l-1 hITFAK"
+                                                ><span
+                                                  class="HdTF8gsRm5MgWvEYlokG"
+                                                ></span
+                                                >Artista</span
+                                              >
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!--==================== 18º BOX-OPTION ON VERTICAL SECTION ====================-->
+                                  <li
+                                    role="listitem"
+                                    draggable="true"
+                                    class="NxEINIJHGytq4gF1r2N1 qEiVyQ28VnOKb0LeijqL"
+                                    aria-setsize="127"
+                                    aria-posinset="91"
+                                  >
+                                    <div
+                                      class="Box__BoxComponent-sc-y4nds-0 jByoWw Box-sc-8t9c76-0 chaEYk ojrThQm1wxR2gZ6GntJB"
+                                      data-encore-id="listRow"
+                                      role="group"
+                                      aria-labelledby="listrow-title-spotify:artist:70NcAr4ZtA3FAqU16iQZSb"
+                                    >
+                                      <div
+                                        role="button"
+                                        aria-disabled="false"
+                                        aria-labelledby="listrow-title-spotify:artist:70NcAr4ZtA3FAqU16iQZSb listrow-subtitle-spotify:artist:70NcAr4ZtA3FAqU16iQZSb"
+                                        aria-describedby="onClickHintspotify:artist:70NcAr4ZtA3FAqU16iQZSb"
+                                        tabindex="-1"
+                                        class="RowButton-sc-xxkq4e-0 hIehTT"
+                                      ></div>
+                                      <div
+                                        style="display: none"
+                                        id="onClickHintspotify:artist:70NcAr4ZtA3FAqU16iQZSb"
+                                      ></div>
+                                      <div
+                                        class="Areas__HeaderSideArea-sc-8gfrea-1 ljvfQS"
+                                      >
+                                        <div
+                                          class="Areas__HeaderSideAreaFlexContainer-sc-8gfrea-2 hvZiQp"
+                                        >
+                                          <div
+                                            class="vreceNX3ABcxyddeS83B nZSNG58XEPTX69mkNi9n OadpZJiOaGfX6Qp4j6n5 g3kBhX1E4EYEC2NFhhxG"
+                                            style="
+                                              width: 48px;
+                                              height: 48px;
+                                              --extracted-entity-color: #697a7a;
+                                            "
+                                          >
+                                            <img
+                                              aria-hidden="true"
+                                              draggable="false"
+                                              loading="eager"
+                                              src="https://i.scdn.co/image/ab6761610000101f3b6b74134d752f76ddae58a6"
+                                              data-testid="entity-image"
+                                              alt="Dhruv"
+                                              class="mMx2LUixlnN_Fu45JpFB iJp40IxKg6emF6KYJ414 yOKoknIYYzAE90pe7_SE Yn2Ei5QZn19gria6LjZj"
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="Areas__HeaderArea-sc-8gfrea-3 TJKQw"
+                                      >
+                                        <div
+                                          class="Areas__InteractiveArea-sc-8gfrea-0 Areas__Column-sc-8gfrea-5 bJSfgC jwUvtM"
+                                        >
+                                          <p
+                                            id="listrow-title-spotify:artist:70NcAr4ZtA3FAqU16iQZSb"
+                                            data-encore-id="type"
+                                            class="Type__TypeElement-sc-goli3j-0 fZDcWX ListRowTitle__ListRowType-sc-1xe2if1-1 fkzPZy d33vqKRxohS9RxzCic1D gj1L_SVM_H8GteWMdEF_"
+                                            dir="auto"
+                                          >
+                                            <span
+                                              class="ListRowTitle__LineClamp-sc-1xe2if1-0 jjpOuK"
+                                              >Dhruv</span
+                                            >
+                                          </p>
+                                          <div class="LSrBzBljgLeDhcm3Soye">
+                                            <p
+                                              data-encore-id="type"
+                                              id="listrow-subtitle-spotify:artist:70NcAr4ZtA3FAqU16iQZSb"
+                                              class="Type__TypeElement-sc-goli3j-0 bDHxRN ListRowDetails__ListRowDetailType-sc-sozu4l-0 ekBKJj d33vqKRxohS9RxzCic1D"
+                                              dir="auto"
+                                            >
+                                              <span
+                                                class="ListRowDetails__LineClamp-sc-sozu4l-1 hITFAK"
+                                                ><span
+                                                  class="HdTF8gsRm5MgWvEYlokG"
+                                                ></span
+                                                >Artista</span
+                                              >
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!--==================== 19º BOX-OPTION ON VERTICAL SECTION ====================-->
+                                  <li
+                                    role="listitem"
+                                    draggable="true"
+                                    class="NxEINIJHGytq4gF1r2N1 qEiVyQ28VnOKb0LeijqL"
+                                    aria-setsize="127"
+                                    aria-posinset="126"
+                                  >
+                                    <div
+                                      class="Box__BoxComponent-sc-y4nds-0 jByoWw Box-sc-8t9c76-0 chaEYk ojrThQm1wxR2gZ6GntJB"
+                                      data-encore-id="listRow"
+                                      role="group"
+                                      aria-labelledby="listrow-title-spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+                                    >
+                                      <div
+                                        role="button"
+                                        aria-disabled="false"
+                                        aria-labelledby="listrow-title-spotify:artist:2ye2Wgw4gimLv2eAKyk1NB listrow-subtitle-spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+                                        aria-describedby="onClickHintspotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+                                        tabindex="-1"
+                                        class="RowButton-sc-xxkq4e-0 hIehTT"
+                                      ></div>
+                                      <div
+                                        style="display: none"
+                                        id="onClickHintspotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+                                      ></div>
+                                      <div
+                                        class="Areas__HeaderSideArea-sc-8gfrea-1 ljvfQS"
+                                      >
+                                        <div
+                                          class="Areas__HeaderSideAreaFlexContainer-sc-8gfrea-2 hvZiQp"
+                                        >
+                                          <div
+                                            class="vreceNX3ABcxyddeS83B nZSNG58XEPTX69mkNi9n OadpZJiOaGfX6Qp4j6n5 g3kBhX1E4EYEC2NFhhxG"
+                                            style="
+                                              width: 48px;
+                                              height: 48px;
+                                              --extracted-entity-color: #917300;
+                                            "
+                                          >
+                                            <img
+                                              aria-hidden="true"
+                                              draggable="false"
+                                              loading="eager"
+                                              src="https://i.scdn.co/image/ab6761610000101f69ca98dd3083f1082d740e44"
+                                              data-testid="entity-image"
+                                              alt="Metallica"
+                                              class="mMx2LUixlnN_Fu45JpFB iJp40IxKg6emF6KYJ414 yOKoknIYYzAE90pe7_SE Yn2Ei5QZn19gria6LjZj"
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="Areas__HeaderArea-sc-8gfrea-3 TJKQw"
+                                      >
+                                        <div
+                                          class="Areas__InteractiveArea-sc-8gfrea-0 Areas__Column-sc-8gfrea-5 bJSfgC jwUvtM"
+                                        >
+                                          <p
+                                            id="listrow-title-spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+                                            data-encore-id="type"
+                                            class="Type__TypeElement-sc-goli3j-0 fZDcWX ListRowTitle__ListRowType-sc-1xe2if1-1 fkzPZy d33vqKRxohS9RxzCic1D gj1L_SVM_H8GteWMdEF_"
+                                            dir="auto"
+                                          >
+                                            <span
+                                              class="ListRowTitle__LineClamp-sc-1xe2if1-0 jjpOuK"
+                                              >Metallica</span
+                                            >
+                                          </p>
+                                          <div class="LSrBzBljgLeDhcm3Soye">
+                                            <p
+                                              data-encore-id="type"
+                                              id="listrow-subtitle-spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+                                              class="Type__TypeElement-sc-goli3j-0 bDHxRN ListRowDetails__ListRowDetailType-sc-sozu4l-0 ekBKJj d33vqKRxohS9RxzCic1D"
+                                              dir="auto"
+                                            >
+                                              <span
+                                                class="ListRowDetails__LineClamp-sc-sozu4l-1 hITFAK"
+                                                ><span
+                                                  class="HdTF8gsRm5MgWvEYlokG"
+                                                ></span
+                                                >Artista</span
+                                              >
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <!--==================== 20º BOX-OPTION ON VERTICAL SECTION ====================-->
+                                  <li
+                                    role="listitem"
+                                    draggable="true"
+                                    class="NxEINIJHGytq4gF1r2N1 XNjgtSbyhshr7YQcVvry qEiVyQ28VnOKb0LeijqL"
+                                    aria-setsize="127"
+                                    aria-posinset="127"
+                                  >
+                                    <div
+                                      class="Box__BoxComponent-sc-y4nds-0 jByoWw Box-sc-8t9c76-0 chaEYk ojrThQm1wxR2gZ6GntJB"
+                                      data-encore-id="listRow"
+                                      role="group"
+                                      aria-labelledby="listrow-title-spotify:collection:your-episodes"
+                                    >
+                                      <div
+                                        role="button"
+                                        aria-disabled="false"
+                                        aria-labelledby="listrow-title-spotify:collection:your-episodes listrow-subtitle-spotify:collection:your-episodes"
+                                        aria-describedby="onClickHintspotify:collection:your-episodes"
+                                        tabindex="-1"
+                                        class="RowButton-sc-xxkq4e-0 hIehTT"
+                                      ></div>
+                                      <div
+                                        style="display: none"
+                                        id="onClickHintspotify:collection:your-episodes"
+                                      ></div>
+                                      <div
+                                        class="Areas__HeaderSideArea-sc-8gfrea-1 ljvfQS"
+                                      >
+                                        <div
+                                          class="Areas__HeaderSideAreaFlexContainer-sc-8gfrea-2 hvZiQp"
+                                        >
+                                          <div
+                                            class="vreceNX3ABcxyddeS83B nZSNG58XEPTX69mkNi9n g3kBhX1E4EYEC2NFhhxG"
+                                            style="
+                                              width: 48px;
+                                              height: 48px;
+                                              --extracted-entity-color: #006050;
+                                            "
+                                          >
+                                            <img
+                                              aria-hidden="true"
+                                              draggable="false"
+                                              loading="eager"
+                                              src="https://misc.scdn.co/your-episodes/SE-64.png"
+                                              data-testid="entity-image"
+                                              alt="Seus episódios"
+                                              class="mMx2LUixlnN_Fu45JpFB iJp40IxKg6emF6KYJ414 yOKoknIYYzAE90pe7_SE Yn2Ei5QZn19gria6LjZj"
+                                              srcset="
+                                                https://misc.scdn.co/your-episodes/SE-64.png 32w,
+                                                https://misc.scdn.co/your-episodes/SE-64.png 64w
+                                              "
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="Areas__HeaderArea-sc-8gfrea-3 TJKQw"
+                                      >
+                                        <div
+                                          class="Areas__InteractiveArea-sc-8gfrea-0 Areas__Column-sc-8gfrea-5 bJSfgC jwUvtM"
+                                        >
+                                          <p
+                                            id="listrow-title-spotify:collection:your-episodes"
+                                            data-encore-id="type"
+                                            class="Type__TypeElement-sc-goli3j-0 fZDcWX ListRowTitle__ListRowType-sc-1xe2if1-1 fkzPZy d33vqKRxohS9RxzCic1D gj1L_SVM_H8GteWMdEF_"
+                                            dir="auto"
+                                          >
+                                            <span
+                                              class="ListRowTitle__LineClamp-sc-1xe2if1-0 jjpOuK"
+                                              >Seus episódios</span
+                                            >
+                                          </p>
+                                          <div class="LSrBzBljgLeDhcm3Soye">
+                                            <p
+                                              data-encore-id="type"
+                                              id="listrow-subtitle-spotify:collection:your-episodes"
+                                              class="Type__TypeElement-sc-goli3j-0 bDHxRN ListRowDetails__ListRowDetailType-sc-sozu4l-0 ekBKJj d33vqKRxohS9RxzCic1D"
+                                              dir="auto"
+                                            >
+                                              <span
+                                                class="ListRowDetails__LineClamp-sc-sozu4l-1 hITFAK"
+                                                ><span
+                                                  class="HdTF8gsRm5MgWvEYlokG"
+                                                ></span
+                                                >Episódios salvos e
+                                                baixados</span
+                                              >
+                                            </p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </div>
+
+                                <div
+                                  class="qnYVzttodnzg9WdrVQ1p"
+                                  data-testid="bottom-sentinel"
+                                  style="height: calc(100% - 869px)"
+                                  role="presentation"
+                                >
+                                  <div
+                                    style="height: 512px"
+                                    role="presentation"
+                                  ></div>
+
+                                  <li
+                                    class="Pns6F5g4OEwEpdmOWTLg"
+                                    role="listitem"
+                                    style="height: calc(100% - 512px)"
+                                  ></li>
+                                </div>
+                              </div>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="os-scrollbar os-scrollbar-horizontal os-scrollbar-unusable os-scrollbar-auto-hidden"
+                  >
+                    <div class="os-scrollbar-track">
+                      <div
+                        class="os-scrollbar-handle"
+                        style="width: 100%; transform: translate(0px)"
+                      ></div>
+                    </div>
+                  </div>
+                  <div
+                    class="os-scrollbar os-scrollbar-vertical os-scrollbar-auto-hidden"
+                  >
+                    <div class="os-scrollbar-track">
+                      <div
+                        class="os-scrollbar-handle"
+                        style="
+                          height: 8.25385%;
+                          transform: translate(0px);
+                        "
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="os-scrollbar-corner"></div>
+                </div>
+              </div>
+              <div
+                class="i4nABk12gLqZuh9Jbdw1"
+                data-testid="left-sidebar-footer"
+              ></div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!--==================== MAIN JS ====================-->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
