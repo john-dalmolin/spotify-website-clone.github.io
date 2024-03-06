@@ -21,6 +21,11 @@
     --encore-spacing-base: 16px;
     --scrollbar-horizontal-size: 16px;
     --scrollbar-vertical-size: 16px;
+    --encore-corner-radius-smaller: 2px;
+    --encore-corner-radius-base: 4px;
+    --encore-corner-radius-larger: 6px;
+    --encore-corner-radius-larger-2: 8px;
+    --encore-corner-radius-larger-3: 16px;
 
     /*========== Colors ==========*/
     /*Color mode HSL(hue, saturation, lightness)*/
@@ -34,6 +39,7 @@
     --background-base: hsl(0, 0%, 7%);
     --background-highlight: hsl(0, 0%, 10%);
     --background-tinted-base: hsl(0, 0%, 100%, .07);
+    --background-tinted-highlight: hsl(0, 0%, 100%, .1);
     --background-elevated-base: hsl(0, 0%, 14%);
     --background-elevated-highlight: hsl(0, 0%, 16%);
 
@@ -527,10 +533,6 @@ a, button {
     align-items: center;
 }
 
-.wBsWS202aGdsul2kEGUf>* {
-    min-width: 0;
-}
-
 .wBsWS202aGdsul2kEGUf>:not(:first-child) {
     -ms-flex-negative: 0;
     flex-shrink: 0;
@@ -538,13 +540,17 @@ a, button {
     margin-inline-start: auto
 }
 
+.bMurPtRDRv5LuN78MTVG {
+    overflow: hidden;
+    position: relative;
+}
+
 .MLbFLVC33caOj3FgSQMC {
     margin: 8px 16px;
 }
 
-.bMurPtRDRv5LuN78MTVG {
-    overflow: hidden;
-    position: relative;
+.wBsWS202aGdsul2kEGUf>* {
+    min-width: 0;
 }
 
 .KjPUGV8uMbl_0bvk9ePv {
@@ -562,15 +568,19 @@ a, button {
     overscroll-behavior-x: contain;
 }
 
-.KjPUGV8uMbl_0bvk9ePv.OlnSvEViCZ_vVdnc3mSQ {
-    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 120px), transparent);
-    mask-image: linear-gradient(90 deg, #000 calc(100% - 120px), transparent);
-}
-
 .KjPUGV8uMbl_0bvk9ePv.MUloQuW1xQawwVs0mDp4 {
     -webkit-mask-image: linear-gradient(90deg, transparent, #000 120px);
-    mask-image: linear-gradient(90deg, transparent, #000 120px);
+    mask-image: linear-gradient(90deg, transparent, #000 120px)
+}
 
+.KjPUGV8uMbl_0bvk9ePv.OlnSvEViCZ_vVdnc3mSQ {
+    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 120px), transparent);
+    mask-image: linear-gradient(90deg, #000 calc(100% - 120px), transparent)
+}
+
+.KjPUGV8uMbl_0bvk9ePv.FjMPyh7lOujDVYQRvp0H {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 120px, #000 calc(100% - 120px), transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 120px, #000 calc(100% - 120px), transparent)
 }
 
 .kkaqVM {
@@ -598,7 +608,11 @@ a, button {
 }
 
 .kkaqVM:not(:last-child) {
-    margin-inline-end: var(--encore-spacing-tighter-4, 8px);
+    margin-inline-end: var(--encore-spacing-tighter-4);
+}
+
+.no-focus-outline:focus {
+    outline: none;
 }
 
 .TxO7Ee8iwqBpkgznKHsd:hover {
@@ -612,6 +626,10 @@ a, button {
     font-size: 0.8125rem;
     font-weight: 500;
     font-family: var(--body-font);
+}
+
+.Chip__ChipComponent-sc-ry3uox-0:hover>.iyAEwU.iyAEwU {
+    background-color: var(--background-tinted-highlight, rgba(0, 0, 0, 0, .05));
 }
 
 @supports (overflow-wrap:anywhere) {
@@ -645,8 +663,15 @@ a, button {
     top: 0;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
     direction: ltr;
+    justify-content: space-between;
+}
+
+.XTk61Y8OkBdUT6Wj4F6i, .ijZQH9pePkbB2MbJHCJV {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    pointer-events: none;
 }
 
 .XTk61Y8OkBdUT6Wj4F6i {
@@ -668,22 +693,23 @@ a, button {
     z-index: 3;
 }
 
+.XTk61Y8OkBdUT6Wj4F6i.VfDGbMWaJe9rcefizTNk {
+    cursor: pointer;
+    opacity: 1;
+    pointer-events: auto;
+}
+
 .XTk61Y8OkBdUT6Wj4F6i:hover {
     background-color: var(--background-elevated-highlight);
     color: var(--white-color);
 }
 
-.XTk61Y8OkBdUT6Wj4F6i, .ijZQH9pePkbB2MbJHCJV {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    pointer-events: none;
+.XTk61Y8OkBdUT6Wj4F6i:hover>* {
+    opacity: 1
 }
 
-.XTk61Y8OkBdUT6Wj4F6i.VfDGbMWaJe9rcefizTNk {
-    cursor: pointer;
-    opacity: 1;
-    pointer-events: auto;
+body[data-dragging-uri-type] .XTk61Y8OkBdUT6Wj4F6i {
+    pointer-events: none
 }
 
 .dCAvla {
@@ -1218,7 +1244,7 @@ a, button {
 .jByoWw {
     box-sizing: border-box;
     position: relative;
-    border-radius: var(--encore-corner-radius-larger, 6px);
+    border-radius: var(--encore-corner-radius-larger);
     min-block-size: 56px;
     z-index: 0;
     color: var(--white-color, #000000);
@@ -1232,7 +1258,7 @@ a, button {
 .jByoWw::after {
     content: "";
     position: absolute;
-    border-radius: var(--encore-corner-radius-larger), 6px;
+    border-radius: var(--encore-corner-radius-larger);
     z-index: -1;
     transition: all var(--animation-speed) var(--animation-ease);
     inset: 8px;
@@ -1421,13 +1447,6 @@ a, button {
     width: 100%;
 }
 
-.os-theme-spotify>.os-scrollbar-horizontal {
-    height: var(--scrolbar-horizontal-size);
-    padding: 2px;
-    right: var(--scrollbar-vertical-size)4px;
-    -webkit-app-region: no drag;
-}
-
 .os-scrollbar-horizontal {
     bottom: 0;
     left: 0;
@@ -1435,6 +1454,11 @@ a, button {
 
 .os-scrollbar {
     pointer-events: none;
+}
+
+.os-host-transition>.os-scrollbar, .os-host-transition>.os-scrollbar-corner {
+    -webkit-transition: opacity .3s, visibility .3s, top .3s, right .3s, bottom .3s, left .3s;
+    transition: opacity .3s, visibility .3s, top .3s, right .3s, bottom .3s, left .3s;
 }
 
 .os-scrollbar, .os-scrollbar-corner {
@@ -1457,15 +1481,19 @@ a, button {
     position: relative;
 }
 
-.os-theme-spotify>.os-scrollbar-horizontal>.os-scrollbar-track>.os-scrollbar-handle::before {
-    bottom: -2px !important;
-    top: -6px !important;
-}
-
 .os-theme-spotify>.os-scrollbar-horizontal>.os-scrollbar-track>.os-scrollbar-handle {
     background: hsla(0, 0%, 100%, .3);
     max-width: none;
     min-width: 30px;
+}
+
+.os-theme-spotify>.os-scrollbar-horizontal>.os-scrollbar-track>.os-scrollbar-handle:hover, .os-theme-spotify>.os-scrollbar-vertical>.os-scrollbar-track>.os-scrollbar-handle:hover {
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.os-theme-spotify>.os-scrollbar-horizontal>.os-scrollbar-track>.os-scrollbar-handle::before {
+    bottom: -2px !important;
+    top: -6px !important;
 }
 
 .os-scrollbar.os-scrollbar-unusable .os-scrollbar-handle {
@@ -1485,13 +1513,6 @@ a, button {
     top: 0;
 }
 
-.os-theme-spotify>.os-scrollbar-vertical {
-    bottom: var(--scrollbar-horizontal-size)4px;
-    padding: 2px;
-    width: var(--scrollbar-vertical-size);
-    -webkit-app-region: no drag;
-}
-
 .os-scrollbar-vertical {
     right: 0;
     top: 0;
@@ -1506,11 +1527,6 @@ a, button {
     background: transparent;
 }
 
-.os-theme-spotify>.os-scrollbar-vertical>.os-scrollbar-track>.os-scrollbar-handle::before {
-    left: -6px !important;
-    right: -2px !important;
-}
-
 .os-theme-spotify>.os-scrollbar-horizontal>.os-scrollbar-track>.os-scrollbar-handle::before, .os-theme-spotify>.os-scrollbar-vertical>.os-scrollbar-track>.os-scrollbar-handle::before {
     bottom: 0;
     content: "";
@@ -1519,6 +1535,11 @@ a, button {
     position: absolute;
     right: 0;
     top: 0;
+}
+
+.os-theme-spotify>.os-scrollbar-vertical>.os-scrollbar-track>.os-scrollbar-handle::before {
+    left: -6px;
+    right: -2px;
 }
 
 .os-theme-spotify.os-host-transition>.os-scrollbar-horizontal>.os-scrollbar-track>.os-scrollbar-handle, .os-theme-spotify.os-host-transition>.os-scrollbar-vertical>.os-scrollbar-track>.os-scrollbar-handle {
@@ -1532,21 +1553,10 @@ a, button {
     min-height: 30px;
 }
 
-.os-host-resize-disabled.os-host-scrollbar-horizontal-hidden>.os-scrollbar-corner, .os-host-resize-disabled.os-host-scrollbar-vertical-hidden>.os-scrollbar-corner, .os-host-scrollbar-horizontal-hidden>.os-scrollbar-horizontal, .os-host-scrollbar-vertical-hidden>.os-scrollbar-vertical, .os-padding+.os-scrollbar-corner, .os-scrollbar-auto-hidden, .os-scrollbar-horizontal+.os-scrollbar-vertical.os-scrollbar-auto-hidden+.os-scrollbar-corner, .os-scrollbar-horizontal.os-scrollbar-auto-hidden+.os-scrollbar-vertical+.os-scrollbar-corner, .os-scrollbar-horizontal.os-scrollbar-auto-hidden+.os-scrollbar-vertical.os-scrollbar-auto-hidden+.os-scrollbar-corner {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-}
-
 .os-theme-spotify>.os-scrollbar-corner {
     background-color: transparent;
     height: var(--scrollbar-horizontal-size)4px;
     width: var(--scrollbar-vertical-size)4px;
-}
-
-.os-host-transition>.os-scrollbar, .os-host-transition>.os-scrollbar-corner {
-    -webkit-transition: opacity .3s, visibility .3s, top .3s, right .3s, bottom .3s, left .3s;
-    transition: opacity .3s, visibility .3s, top .3s, right .3s, bottom .3s, left .3s;
 }
 
 .os-scrollbar-corner {
@@ -1558,22 +1568,34 @@ a, button {
     overflow: hidden;
 }
 
-.os-scrollbar-corner.os-scrollbar-corner-resize, .os-scrollbar:hover {
-    opacity: 1 !important;
-    visibility: visible !important;
+.os-theme-spotify>.os-scrollbar-horizontal {
+    height: var(--scrollbar-horizontal-size);
+    padding: 2px;
+    right: var(--scrollbar-vertical-size)4px;
+    -webkit-app-region: no drag;
+}
+
+.os-theme-spotify>.os-scrollbar-vertical {
+    bottom: var(--scrollbar-horizontal-size)4px;
+    padding: 2px;
+    width: var(--scrollbar-vertical-size);
+    -webkit-app-region: no drag;
 }
 
 .os-theme-spotify>.os-scrollbar-horizontal>.os-scrollbar-track, .os-theme-spotify>.os-scrollbar-horizontal>.os-scrollbar-track.active, .os-theme-spotify>.os-scrollbar-horizontal>.os-scrollbar-track:hover, .os-theme-spotify>.os-scrollbar-vertical>.os-scrollbar-track, .os-theme-spotify>.os-scrollbar-vertical>.os-scrollbar-track.active, .os-theme-spotify>.os-scrollbar-vertical>.os-scrollbar-track:hover {
     background: transparent;
 }
 
-.no-focus-outline :focus {
-    outline: none;
+.os-scrollbar-corner.os-scrollbar-corner-resize, .os-scrollbar:hover {
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
-
-
-
+.os-host-resize-disabled.os-host-scrollbar-horizontal-hidden>.os-scrollbar-corner, .os-host-resize-disabled.os-host-scrollbar-vertical-hidden>.os-scrollbar-corner, .os-host-scrollbar-horizontal-hidden>.os-scrollbar-horizontal, .os-host-scrollbar-vertical-hidden>.os-scrollbar-vertical, .os-padding+.os-scrollbar-corner, .os-scrollbar-auto-hidden, .os-scrollbar-horizontal+.os-scrollbar-vertical.os-scrollbar-auto-hidden+.os-scrollbar-corner, .os-scrollbar-horizontal.os-scrollbar-auto-hidden+.os-scrollbar-vertical+.os-scrollbar-corner, .os-scrollbar-horizontal.os-scrollbar-auto-hidden+.os-scrollbar-vertical.os-scrollbar-auto-hidden+.os-scrollbar-corner {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
 
 
 
@@ -1644,11 +1666,6 @@ a, button {
         --encore-layout-margin-tighter: 24px;
         --encore-layout-margin-base: 32px;
         --encore-layout-margin-looser: 64px;
-        --encore-corner-radius-smaller: 2px;
-        --encore-corner-radius-base: 4px;
-        --encore-corner-radius-larger: 6px;
-        --encore-corner-radius-larger-2: 8px;
-        --encore-corner-radius-larger-3: 16px;
     }
 
     .emaScS {
