@@ -59,7 +59,12 @@ if (leftArrow) {
  * @param {number} timeoutDuration - Duração do timeout em milissegundos (opcional, padrão é 1000).
  */
 
-function controlarBarraDeRolagem(scrollbarContent, scrollbarHorizontal, scrollbarVertical, timeoutDuration = 1000) {
+function controlarBarraDeRolagem(
+  scrollbarContent,
+  scrollbarHorizontal,
+  scrollbarVertical,
+  timeoutDuration = 1000
+) {
   let timeoutScrollbar;
 
   if (scrollbarContent) {
@@ -84,9 +89,66 @@ function controlarBarraDeRolagem(scrollbarContent, scrollbarHorizontal, scrollba
 
 // Elementos selecionados
 const scrollbarContent = document.querySelector(".os-content"),
-      scrollbarHorizontal = document.getElementById("os-scrollbar-horizontal"),
-      scrollbarVertical = document.getElementById("os-scrollbar-vertical");
+  scrollbarHorizontal = document.getElementById("os-scrollbar-horizontal"),
+  scrollbarVertical = document.getElementById("os-scrollbar-vertical");
 
 // Chama a função para controlar a barra de rolagem
-controlarBarraDeRolagem(scrollbarContent, scrollbarHorizontal, scrollbarVertical);
+controlarBarraDeRolagem(
+  scrollbarContent,
+  scrollbarHorizontal,
+  scrollbarVertical
+);
 
+/*=============== SEARCH BAR ===============*/
+
+/*
+ * Controla o comportamento da barra de pesquisa, incluindo a exibição do input e a troca de classes.
+ * @param {HTMLElement} searchBar - O elemento que atua como a barra de pesquisa.
+ * @param {HTMLElement} searchInput - O input de pesquisa.
+ * @param {HTMLElement} searchButton - O botão de pesquisa.
+ */
+
+document.addEventListener("DOMContentLoaded", function () {
+  function controlarBarraDePesquisa(searchBar, searchInput, searchButton) {
+    if (searchBar) {
+      // Adiciona o evento de mouseenter para mostrar o contexto do menu
+      searchBar.addEventListener("mouseenter", () => {
+        searchBar.setAttribute("data-context-menu-open", "true");
+      });
+
+      // Adiciona o evento de mouseleave para ocultar o contexto do menu
+      searchBar.addEventListener("mouseleave", () => {
+        searchBar.removeAttribute("data-context-menu-open");
+      });
+
+      // Adiciona o evento de clique para exibir o input de pesquisa e ocultar o botão
+      searchBar.addEventListener("click", () => {
+        searchBar.classList.add("t6HIrX67Lp80Nj6tGauz");
+        searchInput.setAttribute("aria-hidden", "false");
+        searchInput.removeAttribute("tabindex");
+        searchButton.setAttribute("aria-hidden", "true");
+        searchButton.setAttribute("tabindex", "-1");
+        searchInput.focus(); // Define o foco no input quando ele for exibido
+      });
+    }
+
+    // Adiciona um event listener para fechar a barra de pesquisa ao clicar fora dela
+    document.addEventListener("click", (event) => {
+      if (!searchBar.contains(event.target)) {
+        searchBar.classList.remove("t6HIrX67Lp80Nj6tGauz");
+        searchInput.setAttribute("aria-hidden", "true");
+        searchInput.setAttribute("tabindex", "-1");
+        searchButton.setAttribute("aria-hidden", "false");
+        searchButton.removeAttribute("tabindex");
+      }
+    });
+  }
+
+  // Elementos da barra de pesquisa
+  const buscarDiv = document.querySelector(".JzZyf6OGCGtdscOZGt8Y");
+  const buscarInput = document.querySelector(".QZhV0hWVKlExlKr266jo");
+  const buscarButton = document.querySelector(".wCl7pMTEE68v1xuZeZiB");
+
+  // Chamada da função para controlar a barra de pesquisa
+  controlarBarraDePesquisa(buscarDiv, buscarInput, buscarButton);
+});
