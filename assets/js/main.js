@@ -152,3 +152,136 @@ document.addEventListener("DOMContentLoaded", function () {
   // Chamada da função para controlar a barra de pesquisa
   controlarBarraDePesquisa(buscarDiv, buscarInput, buscarButton);
 });
+
+/*=============== HEART BUTTON ===============*/
+
+/*
+ * Controla a interação do usuário com o botão de coração para favoritar ou desfavoritar uma música.
+ * @param {Element} controlButtonHeart - Elemento que representa o botão de coração.
+ * @param {Element} buttonHeartSVG - Elemento SVG do botão de coração.
+ * @param {string} isButtonActive - Estado atual do botão (ativo ou inativo).
+ */
+
+// Elementos selecionados
+const controlButtonHeart = document.querySelector(".control-button-heart"),
+  buttonHeartSVG = document.getElementById("heartButton");
+
+let isButtonActive = "true";
+
+// Evento de clique para o botão de coração
+if (controlButtonHeart) {
+  controlButtonHeart.addEventListener("click", () => {
+    // Alternar entre as duas configurações
+    if (isButtonActive) {
+      controlButtonHeart.classList.replace("yUUNA", "lhGroS");
+      controlButtonHeart.setAttribute("aria-checked", "false");
+      controlButtonHeart.setAttribute(
+        "aria-label",
+        "Remover da Sua Biblioteca"
+      );
+      buttonHeartSVG.setAttribute(
+        "d",
+        "M1.69 2A4.582 4.582 0 0 1 8 2.023 4.583 4.583 0 0 1 11.88.817h.002a4.618 4.618 0 0 1 3.782 3.65v.003a4.543 4.543 0 0 1-1.011 3.84L9.35 14.629a1.765 1.765 0 0 1-2.093.464 1.762 1.762 0 0 1-.605-.463L1.348 8.309A4.582 4.582 0 0 1 1.689 2zm3.158.252A3.082 3.082 0 0 0 2.49 7.337l.005.005L7.8 13.664a.264.264 0 0 0 .311.069.262.262 0 0 0 .09-.069l5.312-6.33a3.043 3.043 0 0 0 .68-2.573 3.118 3.118 0 0 0-2.551-2.463 3.079 3.079 0 0 0-2.612.816l-.007.007a1.501 1.501 0 0 1-2.045 0l-.009-.008a3.082 3.082 0 0 0-2.121-.861z"
+      );
+    } else {
+      controlButtonHeart.classList.replace("lhGroS", "yUUNA");
+      controlButtonHeart.setAttribute("aria-checked", "true");
+      controlButtonHeart.setAttribute("aria-label", "Salvar na Sua Biblioteca");
+      buttonHeartSVG.setAttribute(
+        "d",
+        "M15.724 4.22A4.313 4.313 0 0 0 12.192.814a4.269 4.269 0 0 0-3.622 1.13.837.837 0 0 1-1.14 0 4.272 4.272 0 0 0-6.21 5.855l5.916 7.05a1.128 1.128 0 0 0 1.727 0l5.916-7.05a4.228 4.228 0 0 0 .945-3.577z"
+      );
+    }
+    // Inverter o estado do botão
+    isButtonActive = !isButtonActive;
+  });
+}
+
+/*=============== NOW PLAYING ===============*/
+
+/*
+ * Controla a ordem de reprodução aleatória das músicas.
+ * @param {Element} ordemButton - Elemento que representa o botão de ordem de reprodução.
+ * @param {string} isOrdemButtonActive - Estado atual da ordem de reprodução (ativa ou inativa).
+ */
+
+// Elemento selecionado
+const ordemButton = document.querySelector(".KVKoQ3u4JpKTvSSFtd6J");
+
+let isOrdemButtonActive = "false";
+
+// Evento de clique para o botão de ordem de reprodução
+if (ordemButton) {
+  ordemButton.addEventListener("click", () => {
+    // Alternar entre as duas configurações
+    if (isOrdemButtonActive) {
+      ordemButton.classList.add("OF_3F0SQCsBtL1jSTlTA");
+      ordemButton.setAttribute("aria-checked", "true");
+      ordemButton.setAttribute("aria-label", "Desativar a ordem aleatória");
+    } else {
+      ordemButton.classList.remove("OF_3F0SQCsBtL1jSTlTA");
+      ordemButton.setAttribute("aria-checked", "false");
+      ordemButton.setAttribute("aria-label", "Ativar a ordem aleatória");
+    }
+    // Inverter o estado do botão
+    isOrdemButtonActive = !isOrdemButtonActive;
+  });
+}
+
+/*=============== REPEAT CONTROL ===============*/
+
+/*
+ * Controla o modo de repetição das faixas.
+ * @param {Element} repeatButton - O botão de controle de repetição.
+ * @param {Element} repeatSVG - O elemento SVG do botão de repetição.
+ * @param {Element} repeatPath - O caminho SVG do botão de repetição.
+ */
+
+// Selecionar elementos do botão de repetição
+const repeatButton = document.querySelector(".Vz6yjzttS0YlLcwrkoUR"),
+  repeatSVG = document.getElementById("control-button-svg"),
+  repeatPath = document.getElementById("control-button-path");
+
+// Adicionar evento de clique ao botão de repetição
+repeatButton.addEventListener("click", () => {
+  const currentAriaLabel = repeatButton.getAttribute("aria-label");
+
+  // Alternar entre os modos de repetição
+  switch (currentAriaLabel) {
+    case "Repetir":
+      // Ativar o modo de repetição de uma faixa
+      repeatButton.classList.add("tP0mccyU1WAa7I9PevC1");
+      repeatButton.setAttribute("aria-label", "Repetir uma faixa");
+      repeatButton.setAttribute("aria-checked", "true");
+      repeatPath.setAttribute(
+        "d",
+        "M0 4.75A3.75 3.75 0 0 1 3.75 1h8.5A3.75 3.75 0 0 1 16 4.75v5a3.75 3.75 0 0 1-3.75 3.75H9.81l1.018 1.018a.75.75 0 1 1-1.06 1.06L6.939 12.75l2.829-2.828a.75.75 0 1 1 1.06 1.06L9.811 12h2.439a2.25 2.25 0 0 0 2.25-2.25v-5a2.25 2.25 0 0 0-2.25-2.25h-8.5A2.25 2.25 0 0 0 1.5 4.75v5A2.25 2.25 0 0 0 3.75 12H5v1.5H3.75A3.75 3.75 0 0 1 0 9.75v-5z"
+      );
+      break;
+    case "Repetir uma faixa":
+      // Ativar o modo de não repetição
+      repeatButton.setAttribute("aria-checked", "mixed");
+      repeatButton.setAttribute("aria-label", "Não repetir");
+      repeatPath.setAttribute(
+        "d",
+        "M0 4.75A3.75 3.75 0 0 1 3.75 1h.75v1.5h-.75A2.25 2.25 0 0 0 1.5 4.75v5A2.25 2.25 0 0 0 3.75 12H5v1.5H3.75A3.75 3.75 0 0 1 0 9.75v-5zM12.25 2.5h-.75V1h.75A3.75 3.75 0 0 1 16 4.75v5a3.75 3.75 0 0 1-3.75 3.75H9.81l1.018 1.018a.75.75 0 1 1-1.06 1.06L6.939 12.75l2.829-2.828a.75.75 0 1 1 1.06 1.06L9.811 12h2.439a2.25 2.25 0 0 0 2.25-2.25v-5a2.25 2.25 0 0 0-2.25-2.25z"
+      );
+      // Adicionar um ícone para indicar o modo de não repetição
+      repeatSVG.innerHTML +=
+        '<path d="M9.12 8V1H7.787c-.128.72-.76 1.293-1.787 1.313V3.36h1.57V8h1.55z"></path>';
+      break;
+    case "Não repetir":
+      // Desativar o modo de não repetição
+      repeatSVG.removeChild(repeatSVG.children[1]);
+      repeatButton.classList.remove("tP0mccyU1WAa7I9PevC1");
+      repeatButton.setAttribute("aria-checked", "false");
+      repeatButton.setAttribute("aria-label", "Repetir");
+      repeatPath.setAttribute(
+        "d",
+        "M0 4.75A3.75 3.75 0 0 1 3.75 1h8.5A3.75 3.75 0 0 1 16 4.75v5a3.75 3.75 0 0 1-3.75 3.75H9.81l1.018 1.018a.75.75 0 1 1-1.06 1.06L6.939 12.75l2.829-2.828a.75.75 0 1 1 1.06 1.06L9.811 12h2.439a2.25 2.25 0 0 0 2.25-2.25v-5a2.25 2.25 0 0 0-2.25-2.25h-8.5A2.25 2.25 0 0 0 1.5 4.75v5A2.25 2.25 0 0 0 3.75 12H5v1.5H3.75A3.75 3.75 0 0 1 0 9.75v-5z"
+      );
+      break;
+    default:
+      break;
+  }
+});
