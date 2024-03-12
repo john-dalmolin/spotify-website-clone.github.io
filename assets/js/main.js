@@ -6,14 +6,25 @@
  * @param {Array} arrow - Array contendo os elementos dos botões de seta (direita e esquerda).
  * @param {string} classAdicionar - Classe a ser adicionada às seções de categorias.
  * @param {string} classRemover - Classe a ser removida das seções de categorias.
+ * @param {HTMLElement} scrollAmount - Elemento que contém as seções de categoria.
  */
 
 // Função para trocar classes e controle dos botões de seta
-function trocarClasses(sections, arrow, classAdicionar, classRemover) {
+function trocarClassesScroll(
+  sections,
+  arrow,
+  classAdicionar,
+  classRemover,
+  scrollAmount
+) {
   sections.forEach((section) => {
     section.classList.remove(classRemover);
     section.classList.add(classAdicionar);
   });
+
+  // Elemento que contém todas as seções de categoria
+  const categoriesContainer = document.getElementById("categories-container");
+  categoriesContainer.scrollLeft += scrollAmount;
 
   arrow.forEach((arrow) => {
     arrow.classList.toggle("VfDGbMWaJe9rcefizTNk");
@@ -28,11 +39,12 @@ const categoriesSection = document.querySelectorAll(".KjPUGV8uMbl_0bvk9ePv"),
 // Evento de clique para a seta direita
 if (rightArrow) {
   rightArrow.addEventListener("click", () => {
-    trocarClasses(
+    trocarClassesScroll(
       categoriesSection,
       [rightArrow, leftArrow],
       "MUloQuW1xQawwVs0mDp4",
-      "OlnSvEViCZ_vVdnc3mSQ"
+      "OlnSvEViCZ_vVdnc3mSQ",
+      200 // Quantidade de rolagem para a direita
     );
   });
 }
@@ -40,11 +52,12 @@ if (rightArrow) {
 // Evento de clique para a seta esquerda
 if (leftArrow) {
   leftArrow.addEventListener("click", () => {
-    trocarClasses(
+    trocarClassesScroll(
       categoriesSection,
       [leftArrow, rightArrow],
       "OlnSvEViCZ_vVdnc3mSQ",
-      "MUloQuW1xQawwVs0mDp4"
+      "MUloQuW1xQawwVs0mDp4",
+      -200 // Quantidade de rolagem para a esquerda
     );
   });
 }
