@@ -298,3 +298,6 @@ repeatButton.addEventListener("click", () => {
       break;
   }
 });
+
+/*=============== SCROLLBAR HANDLE ===============*/
+// trabalhando nisso...
