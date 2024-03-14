@@ -5217,6 +5217,26 @@ body[data-dragging-uri-type] .XTk61Y8OkBdUT6Wj4F6i {
   margin-block-start: 2px;
 }
 
+.QyANtc_r7ff_tqrf5Bvc {
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  max-width:100%;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+  -ms-flex-direction:column;
+  flex-direction:column;
+  position:relative;
+  -webkit-box-flex:1;
+  -ms-flex:1 1 100%;
+  flex:1 1 100%;
+  --shelf-min-height:275px;
+  contain-intrinsic-size:auto var(--shelf-min-height);
+  container-type:inline-size;
+  margin-bottom:20px;
+  min-height:var(--shelf-min-height)
+}
+
 .iKwGKEfAfW7Rkx2_Ba4E {
   display: grid;
   grid-gap: var(--grid-gap);
