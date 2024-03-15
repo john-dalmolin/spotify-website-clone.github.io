@@ -301,3 +301,55 @@ repeatButton.addEventListener("click", () => {
 
 /*=============== SCROLLBAR HANDLE ===============*/
 // trabalhando nisso...
+
+/*=============== RESPONSIVE LAYOUT CARDS BASED ON RESOLUTION ===============*/
+
+/*
+ * Ajusta dinamicamente o número de colunas com base na largura da tela.
+ * @function adjustAttributes
+ */
+
+function adjustAttributes() {
+  // Obtém a largura da tela
+  const screenWidth = window.innerWidth;
+  // Seleciona todas as seções dinâmicas de div
+  const dynamicDivSections = document.querySelectorAll(".iKwGKEfAfW7Rkx2_Ba4E");
+
+  // Itera sobre cada seção dinâmica de div
+  dynamicDivSections.forEach((dynamicDivSection) => {
+    // Define o número de colunas com base na largura da tela
+    switch (true) {
+      case screenWidth >= 1920:
+        dynamicDivSection.style.setProperty("--column-count", 8);
+        break;
+      case screenWidth > 1735:
+        dynamicDivSection.style.setProperty("--column-count", 7);
+        break;
+      case screenWidth > 1425:
+        dynamicDivSection.style.setProperty("--column-count", 6);
+        break;
+      case screenWidth > 1250:
+        dynamicDivSection.style.setProperty("--column-count", 5);
+        break;
+      case screenWidth > 1035:
+        dynamicDivSection.style.setProperty("--column-count", 4);
+        break;
+      case screenWidth > 835:
+        dynamicDivSection.style.setProperty("--column-count", 3);
+        break;
+      case screenWidth <= 835:
+        dynamicDivSection.style.setProperty("--column-count", 2);
+        break;
+      default:
+        break;
+    }
+  });
+}
+
+// Ajusta os atributos quando a página é carregada
+adjustAttributes();
+
+// Ajusta os atributos quando a tela é redimensionada
+window.addEventListener("resize", adjustAttributes);
+
+/*===============  ===============*/
