@@ -299,9 +299,6 @@ repeatButton.addEventListener("click", () => {
   }
 });
 
-/*=============== SCROLLBAR HANDLE ===============*/
-// trabalhando nisso...
-
 /*=============== RESPONSIVE LAYOUT CARDS BASED ON RESOLUTION ===============*/
 
 /*
@@ -352,4 +349,96 @@ adjustAttributes();
 // Ajusta os atributos quando a tela é redimensionada
 window.addEventListener("resize", adjustAttributes);
 
-/*===============  ===============*/
+/*=============== RESIZE OS-CONTENT ===============*/
+
+/*
+ * Ajusta dinamicamente o número de colunas com base na largura da tela.
+ * @function adjustResizeAttributes
+ */
+
+function adjustResizeAttributes() {
+  // Obtém a largura da tela
+  const screenWidthResize = window.innerWidth;
+  // Seleciona a Div com o conteúdo
+  const resizeContentGlue = document.querySelector(".os-content-glue");
+
+  switch (true) {
+    case screenWidthResize >= 1694:
+      resizeContentGlue.style.setProperty("width", "419px");
+      break;
+    case screenWidthResize > 1450:
+      resizeContentGlue.style.setProperty("width", "389px");
+      break;
+    case screenWidthResize > 1315:
+      resizeContentGlue.style.setProperty("width", "350px");
+      break;
+    case screenWidthResize > 1135:
+      resizeContentGlue.style.setProperty("width", "325px");
+      break;
+    case screenWidthResize > 835:
+      resizeContentGlue.style.setProperty("width", "290px");
+      break;
+    case screenWidthResize <= 835:
+      resizeContentGlue.style.setProperty("width", "280px");
+      break;
+    default:
+      break;
+  }
+}
+
+// Ajusta os atributos quando a página é carregada
+adjustResizeAttributes();
+
+// Ajusta os atributos quando a tela é redimensionada
+window.addEventListener("resize", adjustResizeAttributes);
+
+/*
+ * Ajusta dinamicamente o número de colunas com base na largura da tela.
+ * @function adjustWebResizeAttributes
+ */
+
+function adjustWebResizeAttributes() {
+  // Obtém a largura da tela
+  const screenWidthWebResize = window.innerWidth;
+  // Seleciona a Div com o conteúdo
+  const resizeWebContent = document.querySelector(
+    ".spotify__container--is-web"
+  );
+
+  switch (true) {
+    case screenWidthWebResize >= 1694:
+      resizeWebContent.style.setProperty("--left-sidebar-width", "420px");
+      resizeWebContent.style.setProperty("--panel-width", "420px");
+      break;
+    case screenWidthWebResize > 1450:
+      resizeWebContent.style.setProperty("--left-sidebar-width", "383px");
+      resizeWebContent.style.setProperty("--panel-width", "383px");
+      break;
+    case screenWidthWebResize > 1315:
+      resizeWebContent.style.setProperty("--left-sidebar-width", "348px");
+      resizeWebContent.style.setProperty("--panel-width", "348px");
+      break;
+    case screenWidthWebResize > 1135:
+      resizeWebContent.style.setProperty("--left-sidebar-width", "315px");
+      resizeWebContent.style.setProperty("--panel-width", "315px");
+      break;
+    case screenWidthWebResize > 835:
+      resizeWebContent.style.setProperty("--left-sidebar-width", "280px");
+      resizeWebContent.style.setProperty("--panel-width", "107px");
+      break;
+    case screenWidthWebResize < 835:
+      resizeWebContent.style.setProperty("--panel-width", "85px");
+      break;
+    default:
+      break;
+  }
+}
+
+// Ajusta os atributos quando a página é carregada
+adjustWebResizeAttributes();
+
+// Ajusta os atributos quando a tela é redimensionada
+window.addEventListener("resize", adjustWebResizeAttributes);
+
+/*=============== SCROLLBAR HANDLE ===============*/
+// trabalhando nisso...
