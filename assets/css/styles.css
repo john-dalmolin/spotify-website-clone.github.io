@@ -142,10 +142,6 @@ html.spotify__container--is-desktop body {
   }
 }
 
-html.spotify__container--is-web body {
-  overscroll-behavior-y: none;
-}
-
 @supports not (overscroll-behavior-y: none) {
   html.spotify__container--is-web body {
     overflow: hidden;
@@ -1405,6 +1401,11 @@ body[data-dragging-uri-type] .XTk61Y8OkBdUT6Wj4F6i {
   overflow: hidden !important;
 }
 
+.area-scroll {
+  height: 100%;
+  overscroll-behavior-y: contain;
+}
+
 ._K79lE9KrIAkl_bUSSUM {
   height: 100%;
   overscroll-behavior-y: contain;
@@ -2347,9 +2348,7 @@ html.os-html > .os-host > .os-scrollbar {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
-.os-host-overflow {
-  overflow: hidden !important;
-}
+
 .os-theme-none > .os-scrollbar-corner,
 .os-theme-none > .os-scrollbar-horizontal,
 .os-theme-none > .os-scrollbar-vertical {

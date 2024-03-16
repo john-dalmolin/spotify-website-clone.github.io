@@ -440,5 +440,16 @@ adjustWebResizeAttributes();
 // Ajusta os atributos quando a tela é redimensionada
 window.addEventListener("resize", adjustWebResizeAttributes);
 
-/*=============== SCROLLBAR HANDLE ===============*/
-// trabalhando nisso...
+/*=============== CHANGE BACKGROUND HEADER ===============*/
+function scrollHeader() {
+  const nav = document.getElementById("header");
+  const scrollY = document.querySelector(".area-scroll").scrollTop;
+
+  if (scrollY >= 80) {
+    nav.style.setProperty("--top-bar-opacity", "1.0");
+  } else {
+    nav.style.setProperty("--top-bar-opacity", "0.0");
+  }
+}
+
+document.querySelector(".area-scroll").addEventListener("scroll", scrollHeader);
