@@ -445,7 +445,7 @@ function scrollHeader() {
   const nav = document.getElementById("header");
   const scrollY = document.querySelector(".area-scroll").scrollTop;
 
-  if (scrollY >= 80) {
+  if (scrollY >= 150) {
     nav.style.setProperty("--top-bar-opacity", "1.0");
   } else {
     nav.style.setProperty("--top-bar-opacity", "0.0");
@@ -453,3 +453,241 @@ function scrollHeader() {
 }
 
 document.querySelector(".area-scroll").addEventListener("scroll", scrollHeader);
+
+/*=============== CHANGE THE BACKGROUND COLOR BASED ON TRACK ===============*/
+// Selecionar elementos relacionados as tracks dentro do header
+const firstPartHeader = document.querySelector(".T1xI1RTSFU7Wu94UuvE6"),
+  secondPartHeader = document.querySelector(".HsbczDqu9qjcYr7EIdHR"),
+  listOfTracks = document.querySelectorAll(".Z35BWOA10YGn5uc9YgAp");
+
+// Adicionar evento de mouseenter a cada elemento em listOfTracks
+listOfTracks.forEach((track) => {
+  track.addEventListener("mouseenter", () => {
+    const currentAriaPosinset = track.getAttribute("aria-posinset");
+
+    // Alternar entre os modos dependendo da posição da track
+    switch (currentAriaPosinset) {
+      case "1":
+        firstPartHeader.style.setProperty("background-color", "rgb(35, 6, 94)");
+        secondPartHeader.style.setProperty(
+          "background-color",
+          "rgb(35, 6, 94)"
+        );
+        break;
+      case "2":
+        firstPartHeader.style.setProperty(
+          "background-color",
+          "rgb(80, 40, 240)"
+        );
+        secondPartHeader.style.setProperty(
+          "background-color",
+          "rgb(80, 40, 240)"
+        );
+        break;
+      case "3":
+        firstPartHeader.style.setProperty(
+          "background-color",
+          "rgb(32, 56, 80)"
+        );
+        secondPartHeader.style.setProperty(
+          "background-color",
+          "rgb(32, 56, 80)"
+        );
+        break;
+      case "4":
+        firstPartHeader.style.setProperty("background-color", "rgb(72, 24, 0)");
+        secondPartHeader.style.setProperty(
+          "background-color",
+          "rgb(72, 24, 0)"
+        );
+        break;
+      case "5":
+        firstPartHeader.style.setProperty(
+          "background-color",
+          "rgb(168, 103, 71)"
+        );
+        secondPartHeader.style.setProperty(
+          "background-color",
+          "rgb(168, 103, 71)"
+        );
+        break;
+      case "6":
+        firstPartHeader.style.setProperty(
+          "background-color",
+          "rgb(136, 9, 39)"
+        );
+        secondPartHeader.style.setProperty(
+          "background-color",
+          "rgb(136, 9, 39)"
+        );
+        break;
+      case "7":
+        firstPartHeader.style.setProperty(
+          "background-color",
+          "rgb(162, 162, 162)"
+        );
+        secondPartHeader.style.setProperty(
+          "background-color",
+          "rgb(162, 162, 162)"
+        );
+        break;
+      case "8":
+        firstPartHeader.style.setProperty(
+          "background-color",
+          "rgb(248, 99, 165)"
+        );
+        secondPartHeader.style.setProperty(
+          "background-color",
+          "rgb(248, 99, 165)"
+        );
+        break;
+      default:
+        break;
+    }
+  });
+});
+
+// Adicionar evento de mouseleave a listOfTracks
+listOfTracks.forEach((track) => {
+  track.addEventListener("mouseleave", () => {
+    firstPartHeader.style.setProperty("background-color", "rgb(80, 40, 240)");
+    secondPartHeader.style.setProperty("background-color", "rgb(80, 40, 240)");
+  });
+});
+
+/*=============== DETECT OPERATIONAL SYSTEM BY USER ===============*/
+function detectarSistemaOperacional() {
+  const userAgent = navigator.userAgent;
+
+  // Verificar se o usuário está usando Windows
+  if (userAgent.match(/Windows/i)) {
+    return "Windows";
+  } // não será necessário utilizar nesse esquema
+
+  // Verificar se o usuário está usando macOS
+  if (userAgent.match(/Macintosh/i)) {
+    return "Mac";
+  }
+
+  // Verificar se o usuário está usando um dispositivo móvel
+  if (userAgent.match(/Android/i) || userAgent.match(/iPhone/i)) {
+    return "Mobile";
+  }
+
+  // Se não for possível detectar o sistema operacional, retornar desconhecido
+  return "Desconhecido";
+}
+
+// Executar a função e obter o sistema operacional do usuário
+const sistemaOperacional = detectarSistemaOperacional();
+
+/* SHOW CONTENT BASED ON OPERATIONAL SYSTEM */
+// Selecionar o elemento <html>
+const htmlElement = document.documentElement;
+
+// Selecionar o elemento <body>
+const bodyElement = document.body;
+
+if (sistemaOperacional === "Mac") {
+  htmlElement.classList.remove(
+    "no-focus-outline spotify__os--is-windows spotify__container--is-web"
+  );
+  htmlElement.classList.add(
+    "no-focus-outline spotify__os--is-macos spotify__container--is-web"
+  );
+} else if (sistemaOperacional === "Mobile") {
+  // Remove atributos quando aberto via Mobile
+  htmlElement.removeAttribute("class");
+  htmlElement.removeAttribute("style");
+  // Remove o corpo do site para adiocionar uma nova versão
+  bodyElement.innerHTML = "";
+  // Adiciona conteúdo HTML para versão Mobile
+  htmlElement.innerHTML = `
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O navegador não é compatível</title>
+  <link rel="stylesheet" href="assets/css/mobile-version.css">
+  <link rel="icon" sizes="32x32" type="image/png" href="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png">
+  <link rel="icon" sizes="16x16" type="image/png" href="https://open.spotifycdn.com/cdn/images/favicon16.1c487bff.png">
+  <link rel="icon" href="https://open.spotifycdn.com/cdn/images/favicon.0f31d2ea.ico">
+  </head>
+  <body class="mobile__container" >
+  <div class="wrapper">
+  <div class="icon">
+  <img alt="Logo" src="https://open.spotifycdn.com/cdn/images/error-page-logo.24aca703.svg"></div>
+  <div class="content"><h1>O navegador não é compatível</h1><p>O Spotify não está disponível neste navegador. Para ter uma experiência melhor, atualize o navegador ou baixe o app.</p>
+  <div><a href="https://www.spotify.com/download" class="primary">Baixe o app</a>
+  <a href="https://support.spotify.com/article/web-player-help/">Saiba mais</a></div></div></div></body>
+  `;
+}
+
+/*=============== PROFILE BUTTON ACTIVATION ===============*/
+function controlarMenuPerfil(profileButton, container, HTML) {
+  let menuAberto = false; // Variável para controlar se o menu está aberto
+
+  if (profileButton) {
+    profileButton.addEventListener("click", () => {
+      if (menuAberto) {
+        // Se o menu já estiver aberto - remove-o
+        const divMenu = document.querySelector(".menu-perfil");
+        if (divMenu) {
+          divMenu.remove();
+          menuAberto = false; // Atualiza o estado do menu para fechado
+        }
+      } else {
+        // Se o menu não estiver aberto, cria e adiciona-o
+        const divMenu = document.createElement("div");
+        divMenu.classList.add("menu-perfil");
+        divMenu.innerHTML = HTML;
+        container.appendChild(divMenu);
+        menuAberto = true; // Atualiza o estado do menu para aberto
+      }
+
+      // Adiciona um ouvinte de evento para remover a div quando o foco sair dela
+      document.addEventListener("focusout", function (event) {
+        const divMenu = document.querySelector(".menu-perfil");
+        // Verifica se o foco saiu do botão do perfil ou da própria div do menu
+        if (
+          !profileButton.contains(event.relatedTarget) &&
+          !divMenu.contains(event.relatedTarget)
+        ) {
+          // Remove apenas a div do menu
+          divMenu.remove();
+          menuAberto = false; // Atualiza o estado do menu para fechado
+        }
+      });
+    });
+  }
+}
+
+const profileButton = document.querySelector(".SFgYidQmrqrFEVh65Zrg"),
+  container = document.querySelector(".encore-dark-theme.encore-layout-themes"),
+  HTML = `
+  <div data-tippy-root="" id="tippy-144" style="z-index: 9999; position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate(-32px, 64px);">
+      <div id="context-menu" data-testid="context-menu" data-placement="bottom-end">
+          <div data-testid="user-widget-menu" class="ERyo7m5f00o7ToFdGMCD">
+              <ul tabindex="0" role="menu" data-depth="0" class="encore-dark-theme encore-layout-themes NbcaczStd8vD2rHWwaKv" data-roving-interactive="1">
+                  <!--==================== First Item on Menu ====================-->
+                  <li role="presentation" class="rQ6LXqVlEOGZdGIG0LgP"><button class="mWj8N7D_OlsbDgtQx5GW" role="menuitem" tabindex="-1"><span dir="auto" class="Type__TypeElement-sc-goli3j-0 ieTwfQ ellipsis-one-line htqz7Vb8mLJvGKTi1vrs" data-encore-id="type">Conta</span><svg data-encore-id="icon" role="img" aria-label="Link externo" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 kcUFwU"><path d="M1 2.75A.75.75 0 0 1 1.75 2H7v1.5H2.5v11h10.219V9h1.5v6.25a.75.75 0 0 1-.75.75H1.75a.75.75 0 0 1-.75-.75V2.75z"></path><path d="M15 1v4.993a.75.75 0 1 1-1.5 0V3.56L8.78 8.28a.75.75 0 0 1-1.06-1.06l4.72-4.72h-2.433a.75.75 0 0 1 0-1.5H15z"></path></svg></button></li>
+                  <!--==================== Second Item on Menu ====================-->
+                  <li role="presentation" class="rQ6LXqVlEOGZdGIG0LgP"><a role="menuitem" class="mWj8N7D_OlsbDgtQx5GW" href="/user/31hm7oxix2wgd73ctmiweji7beti" tabindex="-1"><span dir="auto" class="Type__TypeElement-sc-goli3j-0 ieTwfQ ellipsis-one-line htqz7Vb8mLJvGKTi1vrs" data-encore-id="type">Perfil</span></a></li>
+                  <!--==================== Third Item on Menu ====================-->
+                  <li role="presentation" class="rQ6LXqVlEOGZdGIG0LgP"><a class="mWj8N7D_OlsbDgtQx5GW" role="menuitem" href="https://support.spotify.com/" target="_blank" tabindex="-1"><span dir="auto" class="Type__TypeElement-sc-goli3j-0 ieTwfQ ellipsis-one-line htqz7Vb8mLJvGKTi1vrs" data-encore-id="type">Suporte</span><svg data-encore-id="icon" role="img" aria-label="Link externo" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 kcUFwU"><path d="M1 2.75A.75.75 0 0 1 1.75 2H7v1.5H2.5v11h10.219V9h1.5v6.25a.75.75 0 0 1-.75.75H1.75a.75.75 0 0 1-.75-.75V2.75z"></path><path d="M15 1v4.993a.75.75 0 1 1-1.5 0V3.56L8.78 8.28a.75.75 0 0 1-1.06-1.06l4.72-4.72h-2.433a.75.75 0 0 1 0-1.5H15z"></path></svg></a></li>
+                  <!--==================== Fourth Item on Menu ====================-->
+                  <li role="presentation" class="rQ6LXqVlEOGZdGIG0LgP"><a class="mWj8N7D_OlsbDgtQx5GW" role="menuitem" href="https://spotify.com/download" target="_blank" tabindex="-1"><span dir="auto" class="Type__TypeElement-sc-goli3j-0 ieTwfQ ellipsis-one-line htqz7Vb8mLJvGKTi1vrs" data-encore-id="type">Baixar</span><svg data-encore-id="icon" role="img" aria-label="Link externo" aria-hidden="true" viewBox="0 0 16 16" class="Svg-sc-ytk21e-0 kcUFwU"><path d="M1 2.75A.75.75 0 0 1 1.75 2H7v1.5H2.5v11h10.219V9h1.5v6.25a.75.75 0 0 1-.75.75H1.75a.75.75 0 0 1-.75-.75V2.75z"></path><path d="M15 1v4.993a.75.75 0 1 1-1.5 0V3.56L8.78 8.28a.75.75 0 0 1-1.06-1.06l4.72-4.72h-2.433a.75.75 0 0 1 0-1.5H15z"></path></svg></a></li>
+                  <!--==================== Fifth Item on Menu ====================-->
+                  <li role="presentation" class="rQ6LXqVlEOGZdGIG0LgP"><a role="menuitem" class="mWj8N7D_OlsbDgtQx5GW Vz3pFUXmll6fKB5Fc4nd" href="/preferences" tabindex="-1"><span dir="auto" class="Type__TypeElement-sc-goli3j-0 ieTwfQ ellipsis-one-line htqz7Vb8mLJvGKTi1vrs" data-encore-id="type">Configurações</span></a></li>
+                  <!--==================== Sixth Item on Menu ====================-->
+                  <li role="presentation" class="rQ6LXqVlEOGZdGIG0LgP"><button data-testid="user-widget-dropdown-logout" class="mWj8N7D_OlsbDgtQx5GW" role="menuitem" tabindex="-1"><span dir="auto" class="Type__TypeElement-sc-goli3j-0 ieTwfQ ellipsis-one-line htqz7Vb8mLJvGKTi1vrs" data-encore-id="type">Sair</span></button></li>
+                </ul>
+          </div>
+      </div>
+  </div>
+    `;
+
+// Chama a função para controlar o menu do perfil
+controlarMenuPerfil(profileButton, container, HTML);
+
+/*=============== SCROLLBAR HANDLE ===============*/
+// (working on it...)

@@ -1,0 +1,173 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --body-font: "Figtree", sans-serif;
+}
+
+/*==================== Mobile Version ====================*/
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  color: #fff;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  font-family: var(--body-font);
+}
+
+body,
+html {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin: 40px 0 16px;
+}
+
+p {
+  color: #a7a7a7;
+  display: inline-block;
+  font-weight: 200;
+  margin: 0 0 40px;
+  max-width: 507px;
+}
+
+a {
+  color: #fff;
+  display: block;
+  font-size: 1em;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+pre {
+  margin: 10px;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+.wrapper {
+  display: block;
+  left: 50%;
+  padding: 32px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /* vertical-align: middle; */
+  width: 100%;
+}
+
+.content {
+  position: static;
+}
+
+.primary {
+  background: #fff;
+  border: 1px solid #878787;
+  border-radius: 48px;
+  color: #000;
+  display: inline-block;
+  line-height: 24px;
+  margin-bottom: 36px;
+  padding: 12px 32px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.primary:hover {
+  border-color: #000;
+  text-decoration: none;
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+}
+
+@media (width <= 450px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  p {
+    max-width: inherit;
+  }
+}
+
+@media (height <= 550px) {
+  .wrapper {
+    height: 100%;
+    left: auto;
+    padding: 16px;
+    position: relative;
+    top: auto;
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  .content {
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /* vertical-align: middle; */
+    width: 100%;
+  }
+
+  .icon {
+    text-align: right;
+  }
+
+  .icon img {
+    height: 24px;
+    width: 24px;
+  }
+
+  h1 {
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0 0 8px;
+  }
+
+  p {
+    font-size: 13px;
+    font-weight: 200;
+    line-height: 20px;
+    margin: 0 0 16px;
+    max-width: 255px;
+  }
+
+  .primary {
+    margin-bottom: 12px;
+  }
+}
+
+@media (height <= 200px) {
+  .primary,
+  a {
+    display: none;
+  }
+}
